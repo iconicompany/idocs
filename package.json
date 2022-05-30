@@ -1,0 +1,24 @@
+{
+  "name": "tech-doc-hugo",
+  "version": "0.0.1",
+  "description": "Iconicdocs.",
+  "main": "none.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iconicompany/idocs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iconicompany/idocs/issues"
+  },
+  "homepage": "https://github.com/iconicompany/idocs#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.3.7",
+    "postcss-cli": "^9.0.2"
+  }
+}
