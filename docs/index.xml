@@ -8,4 +8,127 @@
 &lt;h3 id="курсы-1">Курсы&lt;/h3>
 &lt;ul>
 &lt;li>&lt;a href="https://stepik.org/course/16478/promo">Тестирование ПО: подготовка к сертификации ISTQB Foundation&lt;/a>&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;/ul></description></item><item><title>Docs: Setup Fullstack developer workstation</title><link>/idocs/docs/tutorials/developertools/</link><pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate><guid>/idocs/docs/tutorials/developertools/</guid><description>
+&lt;h2 id="before-you-begin">Before you begin&lt;/h2>
+&lt;p>To start fullstack development on your PC, you have two options&lt;/p>
+&lt;ol>
+&lt;li>Install &lt;a href="https://ubuntu.com/download">Ubuntu&lt;/a>/&lt;a href="https://kubuntu.org/getkubuntu/">Kubuntu&lt;/a> (if you prefer KDE) - recomended way&lt;/li>
+&lt;li>&lt;a href="https://chocolatey.org/install">Install chocolatley package manager&lt;/a> in Windows OS, or download and install all required packages manully&lt;/li>
+&lt;/ol>
+&lt;h2 id="install-nodejs">Install NodeJS&lt;/h2>
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist">&lt;li class="nav-item">
+&lt;a class="nav-link active tab-Ubuntu"
+id="tabs-0-0-tab" data-toggle="tab" href="#tabs-0-0" role="tab" onclick="handleClick(&amp;#34;Ubuntu&amp;#34;);"
+aria-controls="tabs-0-0" aria-selected="true">
+Ubuntu
+&lt;/a>
+&lt;/li>&lt;li class="nav-item">
+&lt;a class="nav-link tab-Windows"
+id="tabs-0-1-tab" data-toggle="tab" href="#tabs-0-1" role="tab" onclick="handleClick(&amp;#34;Windows&amp;#34;);"
+aria-controls="tabs-0-1" aria-selected="false">
+Windows
+&lt;/a>
+&lt;/li>&lt;/ul>
+&lt;div class="tab-content" id="tabs-0-content">&lt;div class="tab-pane fade show active"
+id="tabs-0-0" role="tabpanel" aria-labelled-by="tabs-0-0-tab">&lt;pre tabindex="0">&lt;code class="language-ru" data-lang="ru">curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt-get install -y nodejs
+&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="tab-pane fade"
+id="tabs-0-1" role="tabpanel" aria-labelled-by="tabs-0-1-tab">&lt;pre tabindex="0">&lt;code class="language-ru" data-lang="ru"> choco install nodejs
+&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>
+&lt;h2 id="install-vscode">Install VSCode&lt;/h2>
+&lt;p>Build and debug modern web and cloud applications. Code is free and available on your favorite platform - Linux, Mac OSX, and Windows.&lt;/p>
+&lt;ul class="nav nav-tabs" id="tabs-1" role="tablist">&lt;li class="nav-item">
+&lt;a class="nav-link active tab-Ubuntu"
+id="tabs-1-0-tab" data-toggle="tab" href="#tabs-1-0" role="tab" onclick="handleClick(&amp;#34;Ubuntu&amp;#34;);"
+aria-controls="tabs-1-0" aria-selected="true">
+Ubuntu
+&lt;/a>
+&lt;/li>&lt;li class="nav-item">
+&lt;a class="nav-link tab-Windows"
+id="tabs-1-1-tab" data-toggle="tab" href="#tabs-1-1" role="tab" onclick="handleClick(&amp;#34;Windows&amp;#34;);"
+aria-controls="tabs-1-1" aria-selected="false">
+Windows
+&lt;/a>
+&lt;/li>&lt;/ul>
+&lt;div class="tab-content" id="tabs-1-content">&lt;div class="tab-pane fade show active"
+id="tabs-1-0" role="tabpanel" aria-labelled-by="tabs-1-0-tab">&lt;pre tabindex="0">&lt;code class="language-ru" data-lang="ru">cd /tmp
+wget -O vscode.deb &amp;#39;https://code.visualstudio.com/sha/download?build=stable&amp;amp;os=linux-deb-x64&amp;#39;
+sudo apt install ./vscode.deb
+rm -f vscode.deb
+&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="tab-pane fade"
+id="tabs-1-1" role="tabpanel" aria-labelled-by="tabs-1-1-tab">&lt;pre tabindex="0">&lt;code class="language-ru" data-lang="ru"> choco install vscode
+&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>
+&lt;h2 id="install-postgresql">Install PostgreSQL&lt;/h2>
+&lt;p>PostgreSQL is an object-relational database management system.&lt;/p>
+&lt;ul class="nav nav-tabs" id="tabs-2" role="tablist">&lt;li class="nav-item">
+&lt;a class="nav-link active tab-Ubuntu"
+id="tabs-2-0-tab" data-toggle="tab" href="#tabs-2-0" role="tab" onclick="handleClick(&amp;#34;Ubuntu&amp;#34;);"
+aria-controls="tabs-2-0" aria-selected="true">
+Ubuntu
+&lt;/a>
+&lt;/li>&lt;li class="nav-item">
+&lt;a class="nav-link tab-Windows"
+id="tabs-2-1-tab" data-toggle="tab" href="#tabs-2-1" role="tab" onclick="handleClick(&amp;#34;Windows&amp;#34;);"
+aria-controls="tabs-2-1" aria-selected="false">
+Windows
+&lt;/a>
+&lt;/li>&lt;/ul>
+&lt;div class="tab-content" id="tabs-2-content">&lt;div class="tab-pane fade show active"
+id="tabs-2-0" role="tabpanel" aria-labelled-by="tabs-2-0-tab">&lt;pre tabindex="0">&lt;code class="language-ru" data-lang="ru"> sudo apt-get install -y postgresql postgresql-client
+&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="tab-pane fade"
+id="tabs-2-1" role="tabpanel" aria-labelled-by="tabs-2-1-tab">&lt;pre tabindex="0">&lt;code class="language-ru" data-lang="ru"> choco install postgresql -y --params &amp;#39;/Password:test&amp;#39;
+&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>
+&lt;h2 id="install-dbeaver">Install DBeaver&lt;/h2>
+&lt;p>DBeaver is free and open source universal database tool for developers and database administrators.&lt;/p>
+&lt;ul class="nav nav-tabs" id="tabs-3" role="tablist">&lt;li class="nav-item">
+&lt;a class="nav-link active tab-Ubuntu"
+id="tabs-3-0-tab" data-toggle="tab" href="#tabs-3-0" role="tab" onclick="handleClick(&amp;#34;Ubuntu&amp;#34;);"
+aria-controls="tabs-3-0" aria-selected="true">
+Ubuntu
+&lt;/a>
+&lt;/li>&lt;li class="nav-item">
+&lt;a class="nav-link tab-Windows"
+id="tabs-3-1-tab" data-toggle="tab" href="#tabs-3-1" role="tab" onclick="handleClick(&amp;#34;Windows&amp;#34;);"
+aria-controls="tabs-3-1" aria-selected="false">
+Windows
+&lt;/a>
+&lt;/li>&lt;/ul>
+&lt;div class="tab-content" id="tabs-3-content">&lt;div class="tab-pane fade show active"
+id="tabs-3-0" role="tabpanel" aria-labelled-by="tabs-3-0-tab">&lt;pre tabindex="0">&lt;code class="language-ru" data-lang="ru">sudo add-apt-repository ppa:serge-rider/dbeaver-ce -y
+sudo apt-get install dbeaver-ce -y
+&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="tab-pane fade"
+id="tabs-3-1" role="tabpanel" aria-labelled-by="tabs-3-1-tab">&lt;pre tabindex="0">&lt;code class="language-ru" data-lang="ru"> choco install dbeaver -y
+&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>
+&lt;h2 id="install-chromium">Install Chromium&lt;/h2>
+&lt;p>Chromium is an open-source browser project that aims to build a safer, faster, and more stable way for all Internet users to experience the web&lt;/p>
+&lt;ul class="nav nav-tabs" id="tabs-4" role="tablist">&lt;li class="nav-item">
+&lt;a class="nav-link active tab-Ubuntu"
+id="tabs-4-0-tab" data-toggle="tab" href="#tabs-4-0" role="tab" onclick="handleClick(&amp;#34;Ubuntu&amp;#34;);"
+aria-controls="tabs-4-0" aria-selected="true">
+Ubuntu
+&lt;/a>
+&lt;/li>&lt;li class="nav-item">
+&lt;a class="nav-link tab-Windows"
+id="tabs-4-1-tab" data-toggle="tab" href="#tabs-4-1" role="tab" onclick="handleClick(&amp;#34;Windows&amp;#34;);"
+aria-controls="tabs-4-1" aria-selected="false">
+Windows
+&lt;/a>
+&lt;/li>&lt;/ul>
+&lt;div class="tab-content" id="tabs-4-content">&lt;div class="tab-pane fade show active"
+id="tabs-4-0" role="tabpanel" aria-labelled-by="tabs-4-0-tab">&lt;pre tabindex="0">&lt;code class="language-ru" data-lang="ru">sudo add-apt-repository ppa:savoury1/chromium -y
+sudo add-apt-repository ppa:savoury1/ffmpeg4 -y
+sudo apt-get update
+sudo apt install chromium-browser -y
+&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="tab-pane fade"
+id="tabs-4-1" role="tabpanel" aria-labelled-by="tabs-4-1-tab">&lt;pre tabindex="0">&lt;code class="language-ru" data-lang="ru"> choco install chromium -y
+&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div></description></item></channel></rss>
