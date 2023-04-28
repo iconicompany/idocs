@@ -1,8 +1,8 @@
 {
   "index": "Introduction",
-  "task": "Разработка",
-  "nodejs": "Nodejs docs",
+  "development": "Разработка",
   "administration": "Servers, databases, clusters",
+  "project-catalogue": "Каталог проектов",
   "onboarding": "Onboarding for DEVELOPER",
   "onboarding_pm": "Onboarding for PROJECT MANAGER",
   "contact": {
