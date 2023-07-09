@@ -1,0 +1,80 @@
+import { Steps, Tab, Tabs } from 'nextra-theme-docs'
+
+## Написание заглушек
+
+Заглушки описываются с помощью библиотеки [MSW (Mock Service Worker)](https://mswjs.io/)
+
+Для создания заглушки в проекте нужно сделать:
+<Steps>
+  ### Изучить документацию:
+    - https://mswjs.io/
+    - https://github.com/iconicompany/msw-symlinked
+  ### Установить зависимости
+
+  <Tabs items={['npm', 'pnpm']}>
+    <Tab>
+      `npm i msw msw-symlinked`
+    </Tab>
+    <Tab>
+      `pnpm i msw msw-symlinked`
+    </Tab>
+  </Tabs>
+
+  ### Создать файлы заглушек
+
+  В папке проекта `stubs/` создать папку для сервиса, например `service1`
+
+  В папке сервиса создать файлы заглушек для всех API, например:
+
+  - `apimethod1.200`
+  - `apimethod2.200`
+  - `apimethod2.202.ASYNC_ACCEPTED`
+
+  ### Описать файл обработчиков заглушек для сервиса (`src/stubs/service1.mjs`)
+
+  ```javascript
+  import path from "path";
+  import { rest } from "msw";
+
+  import { stubResponse } from "msw-symlinked";
+
+  const stubPath =  path.resolve(
+    process.env['apps.[appname].stubpath'] + "/service"
+  );
+
+  export default [
+    rest.get(RegExp("/service(.*)/apimethod1"), () => stubResponse(`${stubPath}/apimethod1`)),
+    rest.get(RegExp("/service(.*)/apimethod2"), () => stubResponse(`${stubPath}/apimethod2`, {
+      ASYNC_ACCEPTED: [ctx.set('Refresh', '5;http://refresh-url')]
+    }))
+  ];
+  ```
+
+  ### Описать файл инициализации `msw` с настройками включения/выключения (`src/stubs/index.mjs)`:
+  ```javascript
+  import service1Handlers from 'service1.mjs';
+  const handlers = [
+    process.env["apps.[appname].stub.service1Enabled"] ? service1Handlers : [],
+  ].flat();
+
+  const server = await setupServer(...handlers);
+  server.listen({ onUnhandledRequest: "bypass" });
+  ```
+
+  ### Подключить сервер `msw`
+
+  <Tabs items={['Next.js', 'Node.js сервер']}>
+    <Tab>
+      `_app.js`
+      ```javascript
+      if (typeof window === 'undefined') {
+        require('../src/stubs')
+      }
+      ```
+    </Tab>
+    <Tab>
+      Использовать код из предыдущего пункта напрямую в месте инициализации сервера
+    </Tab>
+  </Tabs>
+
+</Steps>
