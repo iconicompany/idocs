@@ -2,14 +2,17 @@
 
 1. Настроить у проекта переменные
 
-Settings -> Secrets and variables -> Actions, например https://github.com/iconicompany/icompany/settings/secrets/actions
+Settings -> Secrets and variables -> Actions, например https://github.com/iconicompany/projecttemplate/settings/secrets/actions
 
 - KUBE_CONFIG_BASE64_DATA - конфиг k3s для прода в base64
 - KUBE_CONFIG_BASE64_SANDBOX - конфиг k3s для sandbox в base64
-- REGISTRY_USERNAME - пользователь для доступа к docker registry (deploy token в gitlab)
+- REGISTRY_USERNAME - пользователь для доступа к docker registry (deploy token в gitlab) = iconibot
 - REGISTRY_PASSWORD - пароль для доступа к docker registry
 - WERF_SECRET_KEY - ключ для шифрованных значений для прода
 - WERF_SECRET_KEY_SANDBOX - ключ для шифрованных значений для sandbox
+
+В переменные KUBE_CONFIG_BASE64* нужно грузить сертификат для отдельной учетки, скрипт для генерации
+[generate-user.sh](https://github.com/iconicompany/icluster/blob/master/apicerts/generate-user.sh)
 
 2. Настроить проект
 
@@ -30,7 +33,16 @@ Settings -> Secrets and variables -> Actions, например https://github.co
 - `werf helm secret file edit` - редактирование прозвольного файла
 - `werf helm secret values edit` - редактирование yaml файла values
 
-4. Локальный запуск werf для отладки/изучения
+Секреты через `werf helm secret values` грузятся в deployment в открытом виде. Вместо этого лучше делать отдельные секреты [secret.yaml](https://github.com/iconicompany/projecttemplate/blob/master/.helm/templates/secret.yaml)
+
+4. Создать пустой проект в gitlab для docker registry
+New project -> Create blank project.
+Заполнить
+- Project name - имя проекта такое же как на github
+- Project URL - выбрать группу такую же, как организацию на github
+- Initialize repository with a README - снять галочку 
+
+5. Локальный запуск werf для отладки/изучения
 
 Прописать переменные:
 
