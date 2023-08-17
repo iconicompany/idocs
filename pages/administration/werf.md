@@ -1,5 +1,8 @@
 # Выкладка через werf
 
+Сборка werf запускается при push в репозиторий, результат смотреть в разделе [Actions](https://github.com/iconicompany/projecttemplate/actions). При успешном завершении проект выкладывается в kubernetes.
+Если проект не стартует, можно смотреть логи через [openlens](https://github.com/MuhammedKalkan/OpenLens/releases).
+
 1. Настроить у проекта переменные
 
 Settings -> Secrets and variables -> Actions, например https://github.com/iconicompany/projecttemplate/settings/secrets/actions
@@ -53,3 +56,11 @@ WERF_REPO=registry.gitlab.com/iconicompany/icompany
 ```
 
 Запустить сборку командой `werf converge`
+
+## Не решенные проблемы
+
+1. Настроить перезапуск проекта при обновлении secret.yaml
+2. Настройка планировщика cron для запуска заданий из проекта
+3. Сервис для публикации и просмотра логов
+4. Создание БД при первом запуске
+5. Чистка docker registry через `werf cleanup`
