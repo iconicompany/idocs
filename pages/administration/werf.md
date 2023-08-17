@@ -52,7 +52,7 @@ New project -> Create blank project.
 ```
 WERF_ENV=sandbox
 WERF_VALUES_ENV=.helm/values-sandbox.yaml
-WERF_REPO=registry.gitlab.com/iconicompany/icompany
+WERF_REPO=registry.gitlab.com/iconicompany/projecttemplate
 ```
 
 Запустить сборку командой `werf converge`
