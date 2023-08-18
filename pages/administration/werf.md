@@ -45,7 +45,25 @@ New project -> Create blank project.
 - Project URL - выбрать группу такую же, как организацию на github
 - Initialize repository with a README - снять галочку 
 
-5. Локальный запуск werf для отладки/изучения
+5. Локальный запуск docker для отладки/изучения
+
+- Сборка: `docker build -t projecttemplate . $*`
+- Запуск
+
+```
+docker run \
+  -it \
+  --rm \
+  --env-file .env \
+  -p 3000:3000 \
+  --add-host=host.docker.internal:host-gateway \
+  projecttemplate $*
+```
+
+Важно: `--env-file .env` - в таком варианте в .env файле не должно быть ковычек в значениях (")
+Иначе ковычки попадают в значение переменной. Пример ошибки:  Error validating datasource `db`: the URL must start with the protocol `postgresql://` or `postgres://`.
+
+6. Локальный запуск werf для отладки/изучения
 
 Прописать переменные:
 
