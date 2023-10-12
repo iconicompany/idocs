@@ -2,11 +2,11 @@
 FROM node:alpine AS deps
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
 #RUN apk add --update libc6-compat openssl openssl-dev
-RUN npm i -g pnpm
+#RUN npm i -g pnpm
 WORKDIR /app
 COPY package.json pnpm-lock.yaml ./ 
 
-RUN pnpm install 
+RUN npm install 
 
 
 # Rebuild the source code only when needed
@@ -14,7 +14,7 @@ ENV NEXT_TELEMETRY_DISABLED 1
 
 FROM node:alpine AS builder
 RUN apk add --update libc6-compat openssl openssl-dev
-RUN npm i -g npm
+#RUN npm i -g npm
 WORKDIR /app
 COPY *.js *.yaml *.ts? *.json ./
 COPY pages pages

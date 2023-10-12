@@ -1,0 +1,752 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><title>Управление продуктами – Nextra</title><meta name="robots" content="index,follow"/><meta property="og:title" content="Управление продуктами – Nextra"/><meta name="theme-color" content="#111" media="(prefers-color-scheme: dark)"/><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/><style>
+        :root {
+          --nextra-primary-hue: 212deg;
+          --nextra-primary-saturation: 100%;
+          --nextra-navbar-height: 4rem;
+          --nextra-menu-height: 3.75rem;
+          --nextra-banner-height: 2.5rem;
+        }
+        
+        .dark {
+          --nextra-primary-hue: 204deg;
+          --nextra-primary-saturation: 100%;
+        }
+      </style><meta name="msapplication-TileColor" content="#fff"/><meta http-equiv="Content-Language" content="en"/><meta name="description" content="Nextra: the next docs builder"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:site" content="@shuding_"/><meta property="og:title" content="Nextra: the next docs builder"/><meta property="og:description" content="Nextra: the next docs builder"/><meta name="apple-mobile-web-app-title" content="Nextra"/><meta name="next-head-count" content="15"/><link rel="preload" href="/idocs/_next/static/css/445c4173ffc2bf04.css" as="style" crossorigin=""/><link rel="stylesheet" href="/idocs/_next/static/css/445c4173ffc2bf04.css" crossorigin="" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" crossorigin="" nomodule="" src="/idocs/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/idocs/_next/static/chunks/webpack-4a0350fa3a4de394.js" defer="" crossorigin=""></script><script src="/idocs/_next/static/chunks/framework-0c7baedefba6b077.js" defer="" crossorigin=""></script><script src="/idocs/_next/static/chunks/main-6d9a78518808ada5.js" defer="" crossorigin=""></script><script src="/idocs/_next/static/chunks/pages/_app-9c467d34b17b622d.js" defer="" crossorigin=""></script><script src="/idocs/_next/static/chunks/270-9c2aaa217e80548e.js" defer="" crossorigin=""></script><script src="/idocs/_next/static/chunks/pages/project-managment/productmanagement-5c8a46f00c0ef696.js" defer="" crossorigin=""></script><script src="/idocs/_next/static/kL1Xc4OEDAuoyPgptO0cu/_buildManifest.js" defer="" crossorigin=""></script><script src="/idocs/_next/static/kL1Xc4OEDAuoyPgptO0cu/_ssgManifest.js" defer="" crossorigin=""></script></head><body><div id="__next"><script>!function(){try{var d=document.documentElement,c=d.classList;c.remove('light','dark');var e=localStorage.getItem('theme');if('system'===e||(!e&&true)){var t='(prefers-color-scheme: dark)',m=window.matchMedia(t);if(m.media!==t||m.matches){d.style.colorScheme = 'dark';c.add('dark')}else{d.style.colorScheme = 'light';c.add('light')}}else if(e){c.add(e|| '')}if(e==='light'||e==='dark')d.style.colorScheme=e}catch(e){}}()</script><div dir="ltr"><script>document.documentElement.setAttribute('dir','ltr')</script><div class="nextra-nav-container nx-sticky nx-top-0 nx-z-20 nx-w-full nx-bg-transparent print:nx-hidden"><div class="nextra-nav-container-blur nx-pointer-events-none nx-absolute nx-z-[-1] nx-h-full nx-w-full nx-bg-white dark:nx-bg-dark nx-shadow-[0_2px_4px_rgba(0,0,0,.02),0_1px_0_rgba(0,0,0,.06)] dark:nx-shadow-[0_-1px_0_rgba(255,255,255,.1)_inset] contrast-more:nx-shadow-[0_0_0_1px_#000] contrast-more:dark:nx-shadow-[0_0_0_1px_#fff]"></div><nav class="nx-mx-auto nx-flex nx-h-[var(--nextra-navbar-height)] nx-max-w-[90rem] nx-items-center nx-justify-end nx-gap-2 nx-pl-[max(env(safe-area-inset-left),1.5rem)] nx-pr-[max(env(safe-area-inset-right),1.5rem)]"><a class="nx-flex nx-items-center hover:nx-opacity-75 ltr:nx-mr-auto rtl:nx-ml-auto" href="/idocs/"><span>Iconicompany docs</span></a><a href="https://iconicompany.com/" target="_blank" rel="noreferrer" class="nx-text-sm contrast-more:nx-text-gray-700 contrast-more:dark:nx-text-gray-100 nx-relative -nx-ml-2 nx-hidden nx-whitespace-nowrap nx-p-2 md:nx-inline-block nx-text-gray-600 hover:nx-text-gray-800 dark:nx-text-gray-400 dark:hover:nx-text-gray-200" aria-current="false"><span class="nx-absolute nx-inset-x-0 nx-text-center">Contact ↗</span><span class="nx-invisible nx-font-medium">Contact ↗</span><span class="nx-sr-only nx-select-none"> (opens in a new tab)</span></a><div class="nextra-search nx-relative md:nx-w-64 nx-hidden md:nx-inline-block mx-min-w-[200px]"><div class="nx-relative nx-flex nx-items-center nx-text-gray-900 contrast-more:nx-text-gray-800 dark:nx-text-gray-300 contrast-more:dark:nx-text-gray-300"><input spellcheck="false" class="nx-block nx-w-full nx-appearance-none nx-rounded-lg nx-px-3 nx-py-2 nx-transition-colors nx-text-base nx-leading-tight md:nx-text-sm nx-bg-black/[.05] dark:nx-bg-gray-50/10 focus:nx-bg-white dark:focus:nx-bg-dark placeholder:nx-text-gray-500 dark:placeholder:nx-text-gray-400 contrast-more:nx-border contrast-more:nx-border-current" type="search" placeholder="Search documentation…" value=""/></div></div><a href="https://github.com/iconicompany/idocs" target="_blank" rel="noreferrer" class="nx-p-2 nx-text-current"><svg width="24" height="24" fill="currentColor" viewBox="3 3 18 18"><title>GitHub</title><path d="M12 3C7.0275 3 3 7.12937 3 12.2276C3 16.3109 5.57625 19.7597 9.15374 20.9824C9.60374 21.0631 9.77249 20.7863 9.77249 20.5441C9.77249 20.3249 9.76125 19.5982 9.76125 18.8254C7.5 19.2522 6.915 18.2602 6.735 17.7412C6.63375 17.4759 6.19499 16.6569 5.8125 16.4378C5.4975 16.2647 5.0475 15.838 5.80124 15.8264C6.51 15.8149 7.01625 16.4954 7.18499 16.7723C7.99499 18.1679 9.28875 17.7758 9.80625 17.5335C9.885 16.9337 10.1212 16.53 10.38 16.2993C8.3775 16.0687 6.285 15.2728 6.285 11.7432C6.285 10.7397 6.63375 9.9092 7.20749 9.26326C7.1175 9.03257 6.8025 8.08674 7.2975 6.81794C7.2975 6.81794 8.05125 6.57571 9.77249 7.76377C10.4925 7.55615 11.2575 7.45234 12.0225 7.45234C12.7875 7.45234 13.5525 7.55615 14.2725 7.76377C15.9937 6.56418 16.7475 6.81794 16.7475 6.81794C17.2424 8.08674 16.9275 9.03257 16.8375 9.26326C17.4113 9.9092 17.76 10.7281 17.76 11.7432C17.76 15.2843 15.6563 16.0687 13.6537 16.2993C13.98 16.5877 14.2613 17.1414 14.2613 18.0065C14.2613 19.2407 14.25 20.2326 14.25 20.5441C14.25 20.7863 14.4188 21.0746 14.8688 20.9824C16.6554 20.364 18.2079 19.1866 19.3078 17.6162C20.4077 16.0457 20.9995 14.1611 21 12.2276C21 7.12937 16.9725 3 12 3Z"></path></svg><span class="nx-sr-only">GitHub</span><span class="nx-sr-only nx-select-none"> (opens in a new tab)</span></a><a href="https://t.me/iconicompany" target="_blank" rel="noreferrer" class="nx-p-2 nx-text-current"><svg width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 5 30.67 23.25"><title>Discord</title><path d="M26.0015 6.9529C24.0021 6.03845 21.8787 5.37198 19.6623 5C19.3833 5.48048 19.0733 6.13144 18.8563 6.64292C16.4989 6.30193 14.1585 6.30193 11.8336 6.64292C11.6166 6.13144 11.2911 5.48048 11.0276 5C8.79575 5.37198 6.67235 6.03845 4.6869 6.9529C0.672601 12.8736 -0.41235 18.6548 0.130124 24.3585C2.79599 26.2959 5.36889 27.4739 7.89682 28.2489C8.51679 27.4119 9.07477 26.5129 9.55525 25.5675C8.64079 25.2265 7.77283 24.808 6.93587 24.312C7.15286 24.1571 7.36986 23.9866 7.57135 23.8161C12.6241 26.1255 18.0969 26.1255 23.0876 23.8161C23.3046 23.9866 23.5061 24.1571 23.7231 24.312C22.8861 24.808 22.0182 25.2265 21.1037 25.5675C21.5842 26.5129 22.1422 27.4119 22.7621 28.2489C25.2885 27.4739 27.8769 26.2959 30.5288 24.3585C31.1952 17.7559 29.4733 12.0212 26.0015 6.9529ZM10.2527 20.8402C8.73376 20.8402 7.49382 19.4608 7.49382 17.7714C7.49382 16.082 8.70276 14.7025 10.2527 14.7025C11.7871 14.7025 13.0425 16.082 13.0115 17.7714C13.0115 19.4608 11.7871 20.8402 10.2527 20.8402ZM20.4373 20.8402C18.9183 20.8402 17.6768 19.4608 17.6768 17.7714C17.6768 16.082 18.8873 14.7025 20.4373 14.7025C21.9717 14.7025 23.2271 16.082 23.1961 17.7714C23.1961 19.4608 21.9872 20.8402 20.4373 20.8402Z"></path></svg><span class="nx-sr-only">Discord</span><span class="nx-sr-only nx-select-none"> (opens in a new tab)</span></a><button type="button" aria-label="Menu" class="nextra-hamburger -nx-mr-2 nx-rounded nx-p-2 active:nx-bg-gray-400/20 md:nx-hidden"><svg fill="none" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" class=""><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16"></path></g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18h16"></path></g></svg></button></nav></div><div class="nx-mx-auto nx-flex nx-max-w-[90rem]"><div class="motion-reduce:nx-transition-none [transition:background-color_1.5s_ease] nx-bg-transparent"></div><aside class="nextra-sidebar-container nx-flex nx-flex-col md:nx-top-16 md:nx-shrink-0 motion-reduce:nx-transform-none nx-transform-gpu nx-transition-all nx-ease-in-out print:nx-hidden md:nx-w-64 md:nx-sticky md:nx-self-start max-md:[transform:translate3d(0,-100%,0)]"><div class="nx-px-4 nx-pt-4 md:nx-hidden"><div class="nextra-search nx-relative md:nx-w-64"><div class="nx-relative nx-flex nx-items-center nx-text-gray-900 contrast-more:nx-text-gray-800 dark:nx-text-gray-300 contrast-more:dark:nx-text-gray-300"><input spellcheck="false" class="nx-block nx-w-full nx-appearance-none nx-rounded-lg nx-px-3 nx-py-2 nx-transition-colors nx-text-base nx-leading-tight md:nx-text-sm nx-bg-black/[.05] dark:nx-bg-gray-50/10 focus:nx-bg-white dark:focus:nx-bg-dark placeholder:nx-text-gray-500 dark:placeholder:nx-text-gray-400 contrast-more:nx-border contrast-more:nx-border-current" type="search" placeholder="Search documentation…" value=""/></div></div></div><div class="nx-overflow-y-auto nx-overflow-x-hidden nx-p-4 nx-grow md:nx-h-[calc(100vh-var(--nextra-navbar-height)-var(--nextra-menu-height))] nextra-scrollbar"><div class="nx-transform-gpu nx-overflow-hidden nx-transition-all nx-ease-in-out motion-reduce:nx-transition-none"><div class="nx-transition-opacity nx-duration-500 nx-ease-in-out motion-reduce:nx-transition-none nx-opacity-100"><ul class="nx-flex nx-flex-col nx-gap-1 nextra-menu-desktop max-md:nx-hidden"><li class="nx-flex nx-flex-col nx-gap-1"><a class="nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50" href="/idocs/">Introduction</a></li><li class="open"><button class="nx-items-center nx-justify-between nx-gap-2 nx-text-left nx-w-full nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50">Разработка<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="nx-h-[18px] nx-min-w-[18px] nx-rounded-sm nx-p-0.5 hover:nx-bg-gray-800/5 dark:hover:nx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="nx-origin-center nx-transition-transform rtl:-nx-rotate-180 ltr:nx-rotate-90 rtl:nx-rotate-[-270deg]"></path></svg></button><div class="nx-transform-gpu nx-overflow-hidden nx-transition-all nx-ease-in-out motion-reduce:nx-transition-none"><div class="nx-transition-opacity nx-duration-500 nx-ease-in-out motion-reduce:nx-transition-none nx-opacity-100 ltr:nx-pr-0 rtl:nx-pl-0 nx-pt-1"><ul class="nx-flex nx-flex-col nx-gap-1 nx-relative before:nx-absolute before:nx-inset-y-1 before:nx-w-px before:nx-bg-gray-200 before:nx-content-[&quot;&quot;] dark:before:nx-bg-neutral-800 ltr:nx-pl-3 ltr:before:nx-left-0 rtl:nx-pr-3 rtl:before:nx-right-0 ltr:nx-ml-3 rtl:nx-mr-3"><li class=""><button class="nx-items-center nx-justify-between nx-gap-2 nx-text-left nx-w-full nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50">Гайдлайны<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="nx-h-[18px] nx-min-w-[18px] nx-rounded-sm nx-p-0.5 hover:nx-bg-gray-800/5 dark:hover:nx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="nx-origin-center nx-transition-transform rtl:-nx-rotate-180"></path></svg></button><div class="nx-transform-gpu nx-overflow-hidden nx-transition-all nx-ease-in-out motion-reduce:nx-transition-none" style="height:0"><div class="nx-transition-opacity nx-duration-500 nx-ease-in-out motion-reduce:nx-transition-none nx-opacity-0 ltr:nx-pr-0 rtl:nx-pl-0 nx-pt-1"><ul class="nx-flex nx-flex-col nx-gap-1 nx-relative before:nx-absolute before:nx-inset-y-1 before:nx-w-px before:nx-bg-gray-200 before:nx-content-[&quot;&quot;] dark:before:nx-bg-neutral-800 ltr:nx-pl-3 ltr:before:nx-left-0 rtl:nx-pr-3 rtl:before:nx-right-0 ltr:nx-ml-3 rtl:nx-mr-3"><li class="nx-flex nx-flex-col nx-gap-1"><a class="nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50" href="/idocs/development/guidelines/dod/">Definition of Done</a></li><li class="nx-flex nx-flex-col nx-gap-1"><a class="nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50" href="/idocs/development/guidelines/recommendations/">Recommendations</a></li></ul></div></div></li><li class=""><button class="nx-items-center nx-justify-between nx-gap-2 nx-text-left nx-w-full nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50">Nodejs docs<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="nx-h-[18px] nx-min-w-[18px] nx-rounded-sm nx-p-0.5 hover:nx-bg-gray-800/5 dark:hover:nx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="nx-origin-center nx-transition-transform rtl:-nx-rotate-180"></path></svg></button><div class="nx-transform-gpu nx-overflow-hidden nx-transition-all nx-ease-in-out motion-reduce:nx-transition-none" style="height:0"><div class="nx-transition-opacity nx-duration-500 nx-ease-in-out motion-reduce:nx-transition-none nx-opacity-0 ltr:nx-pr-0 rtl:nx-pl-0 nx-pt-1"><ul class="nx-flex nx-flex-col nx-gap-1 nx-relative before:nx-absolute before:nx-inset-y-1 before:nx-w-px before:nx-bg-gray-200 before:nx-content-[&quot;&quot;] dark:before:nx-bg-neutral-800 ltr:nx-pl-3 ltr:before:nx-left-0 rtl:nx-pr-3 rtl:before:nx-right-0 ltr:nx-ml-3 rtl:nx-mr-3"><li class="nx-flex nx-flex-col nx-gap-1"><a class="nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50" href="/idocs/development/nodejs/workstation/">How to setup Nodejs developer workstation</a></li><li class="nx-flex nx-flex-col nx-gap-1"><a class="nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50" href="/idocs/development/nodejs/packages/">Snippets for packages</a></li></ul></div></div></li><li class="nx-flex nx-flex-col nx-gap-1"><a class="nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50" href="/idocs/development/telegram/">Telegram</a></li></ul></div></div></li><li class="open"><button class="nx-items-center nx-justify-between nx-gap-2 nx-text-left nx-w-full nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50">Servers, databases, clusters<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="nx-h-[18px] nx-min-w-[18px] nx-rounded-sm nx-p-0.5 hover:nx-bg-gray-800/5 dark:hover:nx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="nx-origin-center nx-transition-transform rtl:-nx-rotate-180 ltr:nx-rotate-90 rtl:nx-rotate-[-270deg]"></path></svg></button><div class="nx-transform-gpu nx-overflow-hidden nx-transition-all nx-ease-in-out motion-reduce:nx-transition-none"><div class="nx-transition-opacity nx-duration-500 nx-ease-in-out motion-reduce:nx-transition-none nx-opacity-100 ltr:nx-pr-0 rtl:nx-pl-0 nx-pt-1"><ul class="nx-flex nx-flex-col nx-gap-1 nx-relative before:nx-absolute before:nx-inset-y-1 before:nx-w-px before:nx-bg-gray-200 before:nx-content-[&quot;&quot;] dark:before:nx-bg-neutral-800 ltr:nx-pl-3 ltr:before:nx-left-0 rtl:nx-pr-3 rtl:before:nx-right-0 ltr:nx-ml-3 rtl:nx-mr-3"><li class="nx-flex nx-flex-col nx-gap-1"><a class="nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50" href="/idocs/administration/server/">Как создать и настроить сервер на Ubuntu</a></li><li class="nx-flex nx-flex-col nx-gap-1"><a class="nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50" href="/idocs/administration/k3s/">Установка k3s</a></li><li class="nx-flex nx-flex-col nx-gap-1"><a class="nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50" href="/idocs/administration/ldap/">Ldap</a></li><li class="nx-flex nx-flex-col nx-gap-1"><a class="nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50" href="/idocs/administration/putting/">Putting</a></li><li class="nx-flex nx-flex-col nx-gap-1"><a class="nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50" href="/idocs/administration/werf/">Werf</a></li></ul></div></div></li><li class="open"><button class="nx-items-center nx-justify-between nx-gap-2 nx-text-left nx-w-full nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50">Каталог проектов<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="nx-h-[18px] nx-min-w-[18px] nx-rounded-sm nx-p-0.5 hover:nx-bg-gray-800/5 dark:hover:nx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="nx-origin-center nx-transition-transform rtl:-nx-rotate-180 ltr:nx-rotate-90 rtl:nx-rotate-[-270deg]"></path></svg></button><div class="nx-transform-gpu nx-overflow-hidden nx-transition-all nx-ease-in-out motion-reduce:nx-transition-none"><div class="nx-transition-opacity nx-duration-500 nx-ease-in-out motion-reduce:nx-transition-none nx-opacity-100 ltr:nx-pr-0 rtl:nx-pl-0 nx-pt-1"><ul class="nx-flex nx-flex-col nx-gap-1 nx-relative before:nx-absolute before:nx-inset-y-1 before:nx-w-px before:nx-bg-gray-200 before:nx-content-[&quot;&quot;] dark:before:nx-bg-neutral-800 ltr:nx-pl-3 ltr:before:nx-left-0 rtl:nx-pr-3 rtl:before:nx-right-0 ltr:nx-ml-3 rtl:nx-mr-3"><li class=""><button class="nx-items-center nx-justify-between nx-gap-2 nx-text-left nx-w-full nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50">БыстроБанк<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="nx-h-[18px] nx-min-w-[18px] nx-rounded-sm nx-p-0.5 hover:nx-bg-gray-800/5 dark:hover:nx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="nx-origin-center nx-transition-transform rtl:-nx-rotate-180"></path></svg></button><div class="nx-transform-gpu nx-overflow-hidden nx-transition-all nx-ease-in-out motion-reduce:nx-transition-none" style="height:0"><div class="nx-transition-opacity nx-duration-500 nx-ease-in-out motion-reduce:nx-transition-none nx-opacity-0 ltr:nx-pr-0 rtl:nx-pl-0 nx-pt-1"><ul class="nx-flex nx-flex-col nx-gap-1 nx-relative before:nx-absolute before:nx-inset-y-1 before:nx-w-px before:nx-bg-gray-200 before:nx-content-[&quot;&quot;] dark:before:nx-bg-neutral-800 ltr:nx-pl-3 ltr:before:nx-left-0 rtl:nx-pr-3 rtl:before:nx-right-0 ltr:nx-ml-3 rtl:nx-mr-3"><li class="nx-flex nx-flex-col nx-gap-1"><a class="nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50" href="/idocs/project-catalogue/bystrobank/guidelines/">Гайдлайны</a></li><li class="nx-flex nx-flex-col nx-gap-1"><a class="nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50" href="/idocs/project-catalogue/bystrobank/stubs/">Написание заглушек</a></li></ul></div></div></li></ul></div></div></li><li class="nx-flex nx-flex-col nx-gap-1"><a class="nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50" href="/idocs/onboarding/">Onboarding for DEVELOPER</a></li><li class="open"><button class="nx-items-center nx-justify-between nx-gap-2 nx-text-left nx-w-full nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50">Управление проектами<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="nx-h-[18px] nx-min-w-[18px] nx-rounded-sm nx-p-0.5 hover:nx-bg-gray-800/5 dark:hover:nx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="nx-origin-center nx-transition-transform rtl:-nx-rotate-180 ltr:nx-rotate-90 rtl:nx-rotate-[-270deg]"></path></svg></button><div class="nx-transform-gpu nx-overflow-hidden nx-transition-all nx-ease-in-out motion-reduce:nx-transition-none"><div class="nx-transition-opacity nx-duration-500 nx-ease-in-out motion-reduce:nx-transition-none nx-opacity-100 ltr:nx-pr-0 rtl:nx-pl-0 nx-pt-1"><ul class="nx-flex nx-flex-col nx-gap-1 nx-relative before:nx-absolute before:nx-inset-y-1 before:nx-w-px before:nx-bg-gray-200 before:nx-content-[&quot;&quot;] dark:before:nx-bg-neutral-800 ltr:nx-pl-3 ltr:before:nx-left-0 rtl:nx-pr-3 rtl:before:nx-right-0 ltr:nx-ml-3 rtl:nx-mr-3"><li class="nx-flex nx-flex-col nx-gap-1"><a class="nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50" href="/idocs/project-managment/onboarding_pm/">База</a></li><li class="nx-flex nx-flex-col nx-gap-1"><a class="nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50" href="/idocs/project-managment/work/">Управление проектом</a></li><li class="nx-flex nx-flex-col nx-gap-1"><a class="nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50" href="/idocs/project-managment/issue/">Постановка issue</a></li><li class="nx-flex nx-flex-col nx-gap-1"><a class="nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50" href="/idocs/project-managment/escalation/">Эскалация на проекте</a></li><li class="nx-flex nx-flex-col nx-gap-1"><a class="nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50">Оформление задач и требований</a></li><li class="nx-flex nx-flex-col nx-gap-1"><a class="nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50" href="/idocs/project-managment/integration/">Управление интеграцией</a></li><li class="nx-flex nx-flex-col nx-gap-1"><a class="nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50" href="/idocs/project-managment/developmentprocess/">Developmentprocess</a></li><li class="nx-flex nx-flex-col nx-gap-1"><a class="nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50" href="/idocs/project-managment/PMBOK6/">Pmbok6</a></li><li class="nx-flex nx-flex-col nx-gap-1 active"><a class="nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-bg-primary-100 nx-font-semibold nx-text-primary-800 dark:nx-bg-primary-400/10 dark:nx-text-primary-600 contrast-more:nx-border-primary-500 contrast-more:dark:nx-border-primary-500" href="/idocs/project-managment/productmanagement/">Productmanagement</a></li><li class=""><button class="nx-items-center nx-justify-between nx-gap-2 nx-text-left nx-w-full nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50">NUPP_p3express<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="nx-h-[18px] nx-min-w-[18px] nx-rounded-sm nx-p-0.5 hover:nx-bg-gray-800/5 dark:hover:nx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="nx-origin-center nx-transition-transform rtl:-nx-rotate-180"></path></svg></button><div class="nx-transform-gpu nx-overflow-hidden nx-transition-all nx-ease-in-out motion-reduce:nx-transition-none" style="height:0"><div class="nx-transition-opacity nx-duration-500 nx-ease-in-out motion-reduce:nx-transition-none nx-opacity-0 ltr:nx-pr-0 rtl:nx-pl-0 nx-pt-1"><ul class="nx-flex nx-flex-col nx-gap-1 nx-relative before:nx-absolute before:nx-inset-y-1 before:nx-w-px before:nx-bg-gray-200 before:nx-content-[&quot;&quot;] dark:before:nx-bg-neutral-800 ltr:nx-pl-3 ltr:before:nx-left-0 rtl:nx-pr-3 rtl:before:nx-right-0 ltr:nx-ml-3 rtl:nx-mr-3"><li class="nx-flex nx-flex-col nx-gap-1"><a class="nx-flex nx-rounded nx-px-2 nx-py-1.5 nx-text-sm nx-transition-colors [word-break:break-word] nx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:nx-border nx-text-gray-500 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:nx-text-neutral-400 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50 contrast-more:nx-text-gray-900 contrast-more:dark:nx-text-gray-50 contrast-more:nx-border-transparent contrast-more:hover:nx-border-gray-900 contrast-more:dark:hover:nx-border-gray-50" href="/idocs/project-managment/NUPP_p3express/NUPP-principles/">Nupp Principles</a></li></ul></div></div></li></ul></div></div></li></ul></div></div></div><div class="nx-sticky nx-bottom-0 nx-bg-white dark:nx-bg-dark nx-mx-4 nx-py-4 nx-shadow-[0_-12px_16px_#fff] nx-flex nx-items-center nx-gap-2 dark:nx-border-neutral-800 dark:nx-shadow-[0_-12px_16px_#111] contrast-more:nx-border-neutral-400 contrast-more:nx-shadow-none contrast-more:dark:nx-shadow-none nx-border-t" data-toggle-animation="off"><div class="nx-grow nx-flex nx-flex-col"><button title="Change theme" class="nx-h-7 nx-rounded-md nx-px-2 nx-text-left nx-text-xs nx-font-medium nx-text-gray-600 nx-transition-colors dark:nx-text-gray-400 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50" id="headlessui-listbox-button-:Rlsr6:" type="button" aria-haspopup="listbox" aria-expanded="false" data-headlessui-state=""><div class="nx-flex nx-items-center nx-gap-2 nx-capitalize"><svg fill="none" viewBox="3 3 18 18" width="12" height="12" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" fill="currentColor" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg><span class="">Light</span></div></button></div></div></aside><nav class="nextra-toc nx-order-last nx-hidden nx-w-64 nx-shrink-0 xl:nx-block print:nx-hidden nx-px-4" aria-label="table of contents"><div class="nextra-scrollbar nx-sticky nx-top-16 nx-overflow-y-auto nx-pr-4 nx-pt-6 nx-text-sm [hyphens:auto] nx-max-h-[calc(100vh-var(--nextra-navbar-height)-env(safe-area-inset-bottom))] ltr:-nx-mr-4 rtl:-nx-ml-4"><p class="nx-mb-4 nx-font-semibold nx-tracking-tight">On This Page</p><ul><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#с-чего-начинается-продукт" class="nx-font-semibold nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">С чего начинается продукт</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#этапы-разработки-продукта" class="nx-font-semibold nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Этапы разработки продукта</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#исследование-проблемы" class="ltr:nx-pl-4 rtl:nx-pr-4 nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Исследование проблемы</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#изучение-бизнес-модели" class="ltr:nx-pl-8 rtl:nx-pr-8 nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Изучение бизнес-модели</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#определение-чего-клиент-хочет-достигнуть" class="ltr:nx-pl-4 rtl:nx-pr-4 nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Определение чего «клиент» хочет достигнуть</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#определение-того-что-мешает-росту-показателей" class="ltr:nx-pl-4 rtl:nx-pr-4 nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Определение того, что мешает росту показателей</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#пример-исследования-проблемы" class="ltr:nx-pl-4 rtl:nx-pr-4 nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Пример исследования проблемы</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#выработка-решения-которое-может-устранить-эти-проблемы-с-учетом" class="ltr:nx-pl-4 rtl:nx-pr-4 nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Выработка решения, которое может устранить эти проблемы с учетом</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#разработка-бизнес-правил" class="ltr:nx-pl-8 rtl:nx-pr-8 nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Разработка бизнес-правил</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#разработка-бизнес-процесса" class="ltr:nx-pl-8 rtl:nx-pr-8 nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Разработка бизнес-процесса</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#стратегия-продукта" class="ltr:nx-pl-4 rtl:nx-pr-4 nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Стратегия продукта</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#mvp-продукта" class="nx-font-semibold nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">MVP продукта</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#проектирование-основанное-на-гипотезах" class="nx-font-semibold nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Проектирование, основанное на гипотезах</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#написание-проектной-гипотезы" class="ltr:nx-pl-4 rtl:nx-pr-4 nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Написание проектной гипотезы</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#тестирование-гипотезы" class="ltr:nx-pl-4 rtl:nx-pr-4 nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Тестирование гипотезы</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#количественные-и-качественные-критерии" class="ltr:nx-pl-8 rtl:nx-pr-8 nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Количественные и качественные критерии</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#приоритизация-задач" class="nx-font-semibold nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Приоритизация задач</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#задачи-пользователей" class="nx-font-semibold nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Задачи пользователей</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#job-to-be-done" class="ltr:nx-pl-4 rtl:nx-pr-4 nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Job To Be Done</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#интервью-пользователей" class="ltr:nx-pl-4 rtl:nx-pr-4 nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Интервью пользователей</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#что-вы-хотите-сделать" class="ltr:nx-pl-8 rtl:nx-pr-8 nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Что вы хотите сделать?</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#как-вы-в-настоящее-время-делаете-это" class="ltr:nx-pl-8 rtl:nx-pr-8 nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Как вы в настоящее время делаете это?</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#как-можно-улучшить-то-что-вы-делаете" class="ltr:nx-pl-8 rtl:nx-pr-8 nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Как можно улучшить то, что вы делаете?</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#сущности-и-их-поведение" class="nx-font-semibold nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Сущности и их поведение</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#состав-сущностей" class="ltr:nx-pl-4 rtl:nx-pr-4 nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Состав сущностей</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#состояние-сущности" class="ltr:nx-pl-4 rtl:nx-pr-4 nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Состояние сущности</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#поведение-сущностей" class="ltr:nx-pl-4 rtl:nx-pr-4 nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Поведение сущностей</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#отношения" class="ltr:nx-pl-4 rtl:nx-pr-4 nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Отношения</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#игра-сущности-и-поведение" class="ltr:nx-pl-4 rtl:nx-pr-4 nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Игра «Сущности и поведение»</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#моделирование" class="nx-font-semibold nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Моделирование</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#анализ-данных" class="nx-font-semibold nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Анализ данных</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#методы-анализа-данных" class="ltr:nx-pl-4 rtl:nx-pr-4 nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Методы анализа данных</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#метрики" class="nx-font-semibold nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Метрики</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#характеристики-метрики" class="ltr:nx-pl-4 rtl:nx-pr-4 nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Характеристики метрики</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#релевантность" class="ltr:nx-pl-8 rtl:nx-pr-8 nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Релевантность</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#измеримость" class="ltr:nx-pl-8 rtl:nx-pr-8 nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Измеримость</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#действенность" class="ltr:nx-pl-8 rtl:nx-pr-8 nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Действенность</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#надежность" class="ltr:nx-pl-8 rtl:nx-pr-8 nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Надежность</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#удобочитаемость" class="ltr:nx-pl-8 rtl:nx-pr-8 nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Удобочитаемость</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#воронка-продаж" class="nx-font-semibold nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Воронка продаж</a></li><li class="nx-my-2 nx-scroll-my-6 nx-scroll-py-6"><a href="#управление-рисками" class="nx-font-semibold nx-inline-block nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-300 contrast-more:nx-text-gray-900 contrast-more:nx-underline contrast-more:dark:nx-text-gray-50 nx-w-full nx-break-words">Управление рисками</a></li></ul><div class="nx-mt-8 nx-border-t nx-bg-white nx-pt-8 nx-shadow-[0_-12px_16px_white] dark:nx-bg-dark dark:nx-shadow-[0_-12px_16px_#111] nx-sticky nx-bottom-0 nx-flex nx-flex-col nx-items-start nx-gap-2 nx-pb-8 dark:nx-border-neutral-800 contrast-more:nx-border-t contrast-more:nx-border-neutral-400 contrast-more:nx-shadow-none contrast-more:dark:nx-border-neutral-400"><a href="https://github.com/iconicompany/idocs/issues/new?title=Feedback%20for%20%E2%80%9C%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%B0%D0%BC%D0%B8%E2%80%9D&amp;labels=feedback" target="_blank" rel="noreferrer" class="nx-text-xs nx-font-medium nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-100 contrast-more:nx-text-gray-800 contrast-more:dark:nx-text-gray-50">Question? Give us feedback →<span class="nx-sr-only nx-select-none"> (opens in a new tab)</span></a><a class="nx-text-xs nx-font-medium nx-text-gray-500 hover:nx-text-gray-900 dark:nx-text-gray-400 dark:hover:nx-text-gray-100 contrast-more:nx-text-gray-800 contrast-more:dark:nx-text-gray-50" href="https://github.com/iconicompany/idocs/blob/main/pages/project-managment/productmanagement.md">Edit this page</a></div></div></nav><div id="reach-skip-nav"></div><article class="nx-w-full nx-break-words nextra-content nx-flex nx-min-h-[calc(100vh-var(--nextra-navbar-height))] nx-min-w-0 nx-justify-center nx-pb-8 nx-pr-[calc(env(safe-area-inset-right)-1.5rem)]"><main class="nx-w-full nx-min-w-0 nx-max-w-6xl nx-px-6 nx-pt-4 md:nx-px-12"><div class="nextra-breadcrumb nx-mt-1.5 nx-flex nx-items-center nx-gap-1 nx-overflow-hidden nx-text-sm nx-text-gray-500 dark:nx-text-gray-400 contrast-more:nx-text-current"><div class="nx-whitespace-nowrap nx-transition-colors nx-min-w-[24px] nx-overflow-hidden nx-text-ellipsis" title="Управление проектами">Управление проектами</div><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="nx-w-3.5 nx-shrink-0"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg><div class="nx-whitespace-nowrap nx-transition-colors nx-font-medium nx-text-gray-700 contrast-more:nx-font-bold contrast-more:nx-text-current dark:nx-text-gray-100 contrast-more:dark:nx-text-current" title="Productmanagement">Productmanagement</div></div><h1 class="nx-mt-2 nx-text-4xl nx-font-bold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100">Управление продуктами</h1>
+<h2 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-10 nx-border-b nx-pb-1 nx-text-3xl nx-border-neutral-200/70 contrast-more:nx-border-neutral-400 dark:nx-border-primary-100/10 contrast-more:dark:nx-border-neutral-400">С чего начинается продукт<a href="#с-чего-начинается-продукт" id="с-чего-начинается-продукт" class="subheading-anchor" aria-label="Permalink for this section"></a></h2>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Создание продукта должно идти от простого к сложному. Поэтому отчасти аджайл
+стал так популярен. Вы не можете сразу спроектировать сложную систему, потому
+что такая попытка обречена на провал. Аджайл это путь мелких провалов, когда
+вы пробуете что-то и учитесь. Каждый новый проект или «фичу» вы делаете чуть
+лучше чем предыдущий, просто потому что вы уже совершили сотни ошибок.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Так с чего начинается продукт? С идеи? Нет. Продукт начинается с проблемы.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Вы должны чётко понимать проблему, которую хотите решить. Потому что <em>вы
+нанимаете «цифровой продукт» для решения проблем</em>.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Есть проблемы бизнеса, есть проблемы пользователей. И именно проблемы,
+расположенные в таком порядке, определяют дизайн продукта.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Сформулировав проблемы, вы создаете краткое описание проекта, с которым должны
+ознакомиться все заинтересованные лица (люди, принимающие финансовые риски
+проекта).</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">В кратком описании проекта вы должны описать то, для чего проект вообще нужно
+создавать: какие проблемы он должен решить, и какие бизнес-цели ставятся перед
+проектом, какие меры для этого следует предпринять, то есть <em>стратегию
+продукта</em>.</p>
+<h2 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-10 nx-border-b nx-pb-1 nx-text-3xl nx-border-neutral-200/70 contrast-more:nx-border-neutral-400 dark:nx-border-primary-100/10 contrast-more:dark:nx-border-neutral-400">Этапы разработки продукта<a href="#этапы-разработки-продукта" id="этапы-разработки-продукта" class="subheading-anchor" aria-label="Permalink for this section"></a></h2>
+<ol class="nx-mt-6 nx-list-decimal first:nx-mt-0 ltr:nx-ml-6 rtl:nx-mr-6">
+<li class="nx-my-2">Исследование проблемы</li>
+</ol>
+<div class="nextra-code-block nx-relative nx-mt-6 first:nx-mt-0"><pre class="nx-bg-primary-700/5 nx-mb-4 nx-overflow-x-auto nx-rounded-xl nx-subpixel-antialiased dark:nx-bg-primary-300/10 nx-text-[.9em] contrast-more:nx-border contrast-more:nx-border-primary-900/20 contrast-more:nx-contrast-150 contrast-more:dark:nx-border-primary-100/40 nx-py-4" data-language="text" data-theme="default"><code class="nx-border-black nx-border-opacity-[0.04] nx-bg-opacity-[0.03] nx-bg-black nx-break-words nx-rounded-md nx-border nx-py-0.5 nx-px-[.25em] nx-text-[.9em] dark:nx-border-white/10 dark:nx-bg-white/10" dir="ltr" data-language="text" data-theme="default"><span class="line"><span style="color:var(--shiki-color-text)">1. Изучение бизнес-модели клиента</span></span></code></pre><div class="nx-opacity-0 nx-transition [div:hover&gt;&amp;]:nx-opacity-100 focus-within:nx-opacity-100 nx-flex nx-gap-1 nx-absolute nx-m-[11px] nx-right-0 nx-top-0"><button class="nextra-button nx-transition-all active:nx-opacity-50 nx-bg-primary-700/5 nx-border nx-border-black/5 nx-text-gray-600 hover:nx-text-gray-900 nx-rounded-md nx-p-1.5 dark:nx-bg-primary-300/10 dark:nx-border-white/10 dark:nx-text-gray-400 dark:hover:nx-text-gray-50 md:nx-hidden" title="Toggle word wrap"><svg viewBox="0 0 24 24" width="24" height="24" class="nx-pointer-events-none nx-h-4 nx-w-4"><path fill="currentColor" d="M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"></path></svg></button></div></div>
+<div class="nextra-code-block nx-relative nx-mt-6 first:nx-mt-0"><pre class="nx-bg-primary-700/5 nx-mb-4 nx-overflow-x-auto nx-rounded-xl nx-subpixel-antialiased dark:nx-bg-primary-300/10 nx-text-[.9em] contrast-more:nx-border contrast-more:nx-border-primary-900/20 contrast-more:nx-contrast-150 contrast-more:dark:nx-border-primary-100/40 nx-py-4" data-language="text" data-theme="default"><code class="nx-border-black nx-border-opacity-[0.04] nx-bg-opacity-[0.03] nx-bg-black nx-break-words nx-rounded-md nx-border nx-py-0.5 nx-px-[.25em] nx-text-[.9em] dark:nx-border-white/10 dark:nx-bg-white/10" dir="ltr" data-language="text" data-theme="default"><span class="line"><span style="color:var(--shiki-color-text)">2. Определение чего «клиент» хочет достигнуть - каких финансовых показателей. </span></span>
+<span class="line"><span style="color:var(--shiki-color-text)"></span></span>
+<span class="line"><span style="color:var(--shiki-color-text)">3. Определение того, что мешает ему достигнуть этих показателей сейчас? Какие болевые точки есть в процессе?</span></span>
+<span class="line"><span style="color:var(--shiki-color-text)"></span></span>
+<span class="line"><span style="color:var(--shiki-color-text)">4. Выработка решения, которое может устранить эти проблемы с учетом ограничений — сроков, бюджета _клиента_</span></span></code></pre><div class="nx-opacity-0 nx-transition [div:hover&gt;&amp;]:nx-opacity-100 focus-within:nx-opacity-100 nx-flex nx-gap-1 nx-absolute nx-m-[11px] nx-right-0 nx-top-0"><button class="nextra-button nx-transition-all active:nx-opacity-50 nx-bg-primary-700/5 nx-border nx-border-black/5 nx-text-gray-600 hover:nx-text-gray-900 nx-rounded-md nx-p-1.5 dark:nx-bg-primary-300/10 dark:nx-border-white/10 dark:nx-text-gray-400 dark:hover:nx-text-gray-50 md:nx-hidden" title="Toggle word wrap"><svg viewBox="0 0 24 24" width="24" height="24" class="nx-pointer-events-none nx-h-4 nx-w-4"><path fill="currentColor" d="M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"></path></svg></button></div></div>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">2. Реализация решения</p>
+<div class="nextra-code-block nx-relative nx-mt-6 first:nx-mt-0"><pre class="nx-bg-primary-700/5 nx-mb-4 nx-overflow-x-auto nx-rounded-xl nx-subpixel-antialiased dark:nx-bg-primary-300/10 nx-text-[.9em] contrast-more:nx-border contrast-more:nx-border-primary-900/20 contrast-more:nx-contrast-150 contrast-more:dark:nx-border-primary-100/40 nx-py-4" data-language="text" data-theme="default"><code class="nx-border-black nx-border-opacity-[0.04] nx-bg-opacity-[0.03] nx-bg-black nx-break-words nx-rounded-md nx-border nx-py-0.5 nx-px-[.25em] nx-text-[.9em] dark:nx-border-white/10 dark:nx-bg-white/10" dir="ltr" data-language="text" data-theme="default"><span class="line"><span style="color:var(--shiki-color-text)">1. Разработка продукта — сайта или приложения.</span></span>
+<span class="line"><span style="color:var(--shiki-color-text)"></span></span>
+<span class="line"><span style="color:var(--shiki-color-text)">2. Запуск продукта</span></span></code></pre><div class="nx-opacity-0 nx-transition [div:hover&gt;&amp;]:nx-opacity-100 focus-within:nx-opacity-100 nx-flex nx-gap-1 nx-absolute nx-m-[11px] nx-right-0 nx-top-0"><button class="nextra-button nx-transition-all active:nx-opacity-50 nx-bg-primary-700/5 nx-border nx-border-black/5 nx-text-gray-600 hover:nx-text-gray-900 nx-rounded-md nx-p-1.5 dark:nx-bg-primary-300/10 dark:nx-border-white/10 dark:nx-text-gray-400 dark:hover:nx-text-gray-50 md:nx-hidden" title="Toggle word wrap"><svg viewBox="0 0 24 24" width="24" height="24" class="nx-pointer-events-none nx-h-4 nx-w-4"><path fill="currentColor" d="M4 19h6v-2H4v2zM20 5H4v2h16V5zm-3 6H4v2h13.25c1.1 0 2 .9 2 2s-.9 2-2 2H15v-2l-3 3l3 3v-2h2c2.21 0 4-1.79 4-4s-1.79-4-4-4z"></path></svg></button></div></div>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">То есть, <em>клиент</em> приходит с неоформленной идей и на выходе получает
+итеративно</p>
+<ol class="nx-mt-6 nx-list-decimal first:nx-mt-0 ltr:nx-ml-6 rtl:nx-mr-6">
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Определение проблемы, краткое описание решения (результат исследовательской фазы)</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Готовое решение — результат разработки и запуска решения.</p>
+</li>
+</ol>
+<h3 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-8 nx-text-2xl">Исследование проблемы<a href="#исследование-проблемы" id="исследование-проблемы" class="subheading-anchor" aria-label="Permalink for this section"></a></h3>
+<h4 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-8 nx-text-xl">Изучение бизнес-модели<a href="#изучение-бизнес-модели" id="изучение-бизнес-модели" class="subheading-anchor" aria-label="Permalink for this section"></a></h4>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Целью деятельности коммерческой организации — делать деньги. То, как
+организация зарабатывает деньги показывает ее денежный поток. Поэтому изучение
+денежного потока является критически важным этапом исследования. Без понимания
+того, что и почему приносит фирме деньги, не возможна эффективная разработка
+программных продуктов и разработка стратегий и инициатив.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Итогом данного исследования этапа является модель денежного потока
+организации. Модель денежного потока может дать экономист, отвечающий за
+финансовые результаты. Модель денежного потока даст ответы на то, что и почему
+приносит прибыль организации. Лучше, если это будет «вариативная» модель в
+табличном процессоре, куда вы сможете подставлять различные входные значения,
+моделируя различные результаты.</p>
+<h3 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-8 nx-text-2xl">Определение чего «клиент» хочет достигнуть<a href="#определение-чего-клиент-хочет-достигнуть" id="определение-чего-клиент-хочет-достигнуть" class="subheading-anchor" aria-label="Permalink for this section"></a></h3>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Следующим этапом после получения модели денежного потока является
+формулирование метрик. Вы должны понимать, какие финансовые показатели имеют
+значения для клиента. Как правило, ключевой метрикой денежного потока является
+Чистая приведенная стоимость (NPV). Данный показатель учитывает временную
+стоимость денег и показывает объем валовой прибыли, приведенный к сегодняшнему
+дню. Метрики не обязательно могут быть привязаны к денежному потоку. В
+деятельности различных подразделений бизнеса могут быть иные метрики — уровень
+отклика в деятельности контакт-центра, уровень просрочки и т. д. Все они в
+итоге влияют на итоговый денежный поток, но могут быть промоделированы
+независимо для последующего включения в общую картину.</p>
+<h3 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-8 nx-text-2xl">Определение того, что мешает росту показателей<a href="#определение-того-что-мешает-росту-показателей" id="определение-того-что-мешает-росту-показателей" class="subheading-anchor" aria-label="Permalink for this section"></a></h3>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">От формулирования метрик мы переходим к формулированию гипотез относительно
+того, что является узким местом в денежном потоке клиента. Понимание узких
+мест клиента критически важно для формулирования гипотез.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Для первичного определения узких мест вы можете запросить качественный опрос
+«менеджеров» фирмы. Менеджеры фирмы могут иметь собственные гипотезы
+относительно узких мест в продажах или обслуживании. Это могут быть сведения о
+определенных сегментах клиентов, вызывающие опасения, существенные проблемы
+обслуживания и т. д.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">После первичной диагностики проблем мы переходим к статистической проверке
+гипотез. Данный этап выполняется аналитиками данных, в ходе которого строятся
+линейные регрессии, проводится оценка статистической значимости факторов и
+применяются иные «продвинутые» методы исследования.</p>
+<h3 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-8 nx-text-2xl">Пример исследования проблемы<a href="#пример-исследования-проблемы" id="пример-исследования-проблемы" class="subheading-anchor" aria-label="Permalink for this section"></a></h3>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Данный пример демонстрирует совместную деятельность команды по диагностике и
+решению экономических проблем</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Роли:</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">PO - Владелец продукта</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">PM - Менеджер продукта</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">DS - Аналитик данных</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">EC - Экономист</p>
+<ul class="nx-mt-6 nx-list-disc first:nx-mt-0 ltr:nx-ml-6 rtl:nx-mr-6">
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">PO: Сегмент таксистов не рентабельный. Как нам решить эту проблему? Если мы не найдем решение, мы будем вынуждены прекратить кредитование данного сегмента та.</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">PM: Давайте проверим эту гипотезу. Для начала мы должны удостовериться, что дефолтность таксистов отличается от аналогичной выборки клиентов не-таксистов.</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">DS: (жонглирует цифрами) Нам нужна репрезентативная выборка из допустим...N клиентов.</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">PM: К сожалению, нас нет признака &quot;таксист&quot; в данных. Могут ли менеджеры заполнить данный признак ретроспективно по предоставленной выборке?</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">PO: Думаю это возможно. Должны ли менеджеры фиксировать собственное суждение или лучше воспользоваться сервисом X и Y для определения сегмента таксист?</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">PM: Лучше заполнить все варианты, чтобы определить статистическую значимость различных вариантов идентификации</p>
+</li>
+</ul>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Спустя некоторое время</p>
+<ul class="nx-mt-6 nx-list-disc first:nx-mt-0 ltr:nx-ml-6 rtl:nx-mr-6">
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">DS: На выборке размером N все факты больше похожи на шум. Можем ли вы увеличить выборку до размера M?</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">PO: Да, менедежры могут заполнить и такую выборку.</p>
+</li>
+</ul>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Спустя еще некоторое время</p>
+<ul class="nx-mt-6 nx-list-disc first:nx-mt-0 ltr:nx-ml-6 rtl:nx-mr-6">
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">DS: Мы сформировали 2 бизнес-правила, позволяющие уменьшить просрочку по сегменту таксист (перечисляет условия)</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">PM: Как мы можем выбрать из двух правил лучшее?</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">EC: Я построил денежные потоки с учетом правила А и Б. При ставке дисконтирования Z правило А экономит X млн рублей по ретро-расчетам.</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">PM: Применяем бизнес-правило A и открываем кредитования сегмента таксисты?</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">PO: Согласовано.</p>
+</li>
+</ul>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">В данном примере, менеджер продукта формулирует <a href="https://ru.wikipedia.org/wiki/%D0%9D%D1%83%D0%BB%D0%B5%D0%B2%D0%B0%D1%8F_%D0%B3%D0%B8%D0%BF%D0%BE%D1%82%D0%B5%D0%B7%D0%B0" target="_blank" rel="noreferrer" class="nx-text-primary-600 nx-underline nx-decoration-from-font [text-underline-position:from-font]">нулевую
+гипотезу<span class="nx-sr-only nx-select-none"> (opens in a new tab)</span></a> о том, исходная
+предпосылка (дефолность таксистов выше по сравнению с аналогичной выборкой не
+таксистов) не верна и использует статистический аппарат для ее опровержения на
+фактических данных. Если нулевую гипотезу не удается опровергнуть
+статистически, она считается верной и проблема не требует «решения». Если
+подозрения не исчерпываются проведенным анализом, возможно следует взглянуть
+на проблему под другим углом, поискать иные данные.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Для проверки гипотезы о равенстве долей «просрочников» в двух совокупностях
+(таксисты и не таксисты) аналитик данных (DS) использовал z-критерий. См.
+Раздел «Параметрические критерии» в книге «Статобработка экспериментальных
+данных в MS Excel» (Томск, 2018).</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Здесь мы проводим аналогию с методиками «доказательной медицины», где данный
+подход используется повсеместно. В приведенном примере, в виду опровержения
+нулевой гипотезы и необходимости выбора из двух конкурирующих решений,
+менеджер продукта переходит к задаче поиска решения с учетом максимизации
+эффекта на денежный поток.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Разумеется, ретро-тест, приведенный в данном примере имеет некоторые
+ограничения, и может не учитывать существую структуру продаж.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">В некоторых случаях, когда эффект принимаемых решений можно оценить в
+перспективе нескольких месяцев, можно использовать разные конкурирующие
+стратегии, для того чтобы оценить финансовые результаты по текущей структуре
+продаж и таким образом определить наилучшую стратегию.</p>
+<h3 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-8 nx-text-2xl">Выработка решения, которое может устранить эти проблемы с учетом<a href="#выработка-решения-которое-может-устранить-эти-проблемы-с-учетом" id="выработка-решения-которое-может-устранить-эти-проблемы-с-учетом" class="subheading-anchor" aria-label="Permalink for this section"></a></h3>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">ограничений — сроков, бюджета <em>клиента</em></p>
+<h4 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-8 nx-text-xl">Разработка бизнес-правил<a href="#разработка-бизнес-правил" id="разработка-бизнес-правил" class="subheading-anchor" aria-label="Permalink for this section"></a></h4>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Одним из наиболее простых вариантов решения является доработка бизнес-правил
+(правил, зарабатывающих или экономящих бизнесу деньги). Однако за видимой
+простотой бизнес-правила могут крыться сложности получения данных для его
+применения.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Например, итогом построения линейной регрессии может стать понимание того, как
+вариационные параметры сделки (или иной сущности моделирования) влияют на
+итоговые показатели бизнеса.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Данные исследования могут послужить основой для формулирования стратегий
+продаж (коммуникаций, проверок и иных видов исследуемых действий),
+эффективность которых также должна подтверждаться статистическими тестами
+(например, z-тест)</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Таким образом, основываясь на знаниях денежного потока клиента, знаниях
+вариационных параметров, влияющих на итоговые результаты, на выходе вы
+формулируете набор стратегий, эффективность — статистическую и практическую
+значимость которых вам предстоит подтвердить ретро-тестами и практически.</p>
+<h4 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-8 nx-text-xl">Разработка бизнес-процесса<a href="#разработка-бизнес-процесса" id="разработка-бизнес-процесса" class="subheading-anchor" aria-label="Permalink for this section"></a></h4>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Как правило, разработка новых решений - это не разработка всего бизнес-
+процесса заново. За одну итерацию можно изменить лишь небольшую часть бизнес-
+процесса. Поэтому вы начинаете с описания существующего бизнес-процесса,
+используя методики пользовательских историй или нотацию бизнес-процессов, что
+по большому счету одно и то же. И там и там вы описываете «этапы» и
+последовательность выполнения работ, просто называете это историями или
+активностями.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Именуя активности, вы должны придерживаться стиля CTA (Call-to-action). Именно
+это название пользователь увидит у себя в рабочем листе или оповещении. Это
+может быть задача «Загрузить ПТС» (где пользователь видит элемент управления
+для загрузки и просмотра файла), «Подписать договор» и т.д.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Следующим этапом после описания процесса является определение места «врезки»
+нового продукта. Вы меняете наиболее существенную часть, «MVP продукта» —
+минимальную часть процесса, которую можно запустить, чтобы получить обратную
+связь от пользователей процесса или экономический эффект.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Каждой активности процесса соответствует некоторый интерфейс, или сервис. Вы
+не должны беспокоиться о том, где и как это будет реализовано, сейчас это не
+важно. Ваш процесс будет разбит на изолированные предметные области
+инженерами.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Для того, чтобы они могли это сделать, вы должны описать действия с точки
+зрения пользователя. Это можно сделать:</p>
+<ol class="nx-mt-6 nx-list-decimal first:nx-mt-0 ltr:nx-ml-6 rtl:nx-mr-6">
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Черновиками интерфейсов и прототипированием совместно с фронт-разработчиком, например в <a href="https://uniforms.tools/" target="_blank" rel="noreferrer" class="nx-text-primary-600 nx-underline nx-decoration-from-font [text-underline-position:from-font]">https://uniforms.tools/<span class="nx-sr-only nx-select-none"> (opens in a new tab)</span></a></p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Написанием критериев приемки.</p>
+</li>
+</ol>
+<h3 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-8 nx-text-2xl">Стратегия продукта<a href="#стратегия-продукта" id="стратегия-продукта" class="subheading-anchor" aria-label="Permalink for this section"></a></h3>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Ядро стратегии (см. книгу «<a href="https://docs.ilb.ru/doc/development/library.xhtml#horosaj_strategij__plohaj_strategij__v_cem_otlicie_i_pocemu_eto_vazno:_ricard_rumel_t" target="_blank" rel="noreferrer" class="nx-text-primary-600 nx-underline nx-decoration-from-font [text-underline-position:from-font]">Хорошая стратегия, плохая
+стратегия<span class="nx-sr-only nx-select-none"> (opens in a new tab)</span></a>»)
+состоит из 3 ключевых пунктов:</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">1. Постановка диагноза, определяющего либо объясняющего природу проблемы.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">При помощи исследований пользователей и анализа данных вы распознаете те
+аспекты ситуации, которые критически важны для решения задачи, что во много
+раз упрощает невероятно сложную реальность.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">2. Направляющая политика для решения проблем</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Общий подход, выбранный для преодоления препятствий, выявленных в процессе
+диагностики. Должен описывать общие детали реализации продукта.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">3. Согласованные меры, необходимые для реализации направляющей политики.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Дорожная карта, последовательное выполнение которой приводит к результату.</p>
+<h2 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-10 nx-border-b nx-pb-1 nx-text-3xl nx-border-neutral-200/70 contrast-more:nx-border-neutral-400 dark:nx-border-primary-100/10 contrast-more:dark:nx-border-neutral-400">MVP продукта<a href="#mvp-продукта" id="mvp-продукта" class="subheading-anchor" aria-label="Permalink for this section"></a></h2>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Жизненный цикл продукта, согласно <a href="https://www.crisp.se/konsulter/henrik-kniberg" target="_blank" rel="noreferrer" class="nx-text-primary-600 nx-underline nx-decoration-from-font [text-underline-position:from-font]">Хенрику
+Книбергу<span class="nx-sr-only nx-select-none"> (opens in a new tab)</span></a>:</p>
+<ol class="nx-mt-6 nx-list-decimal first:nx-mt-0 ltr:nx-ml-6 rtl:nx-mr-6">
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Самый ранний продукт, доступный для тестирования</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Самый ранний продукт, который можно использовать</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Самый ранний продукт, который нравится пользователям</p>
+</li>
+</ol>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Подход MVP - это подход, основанный на гипотезах . Вместо того, чтобы думать о
+своем MVP как о продукте, лучше думать об этом как о обучающем упражнении. У
+вас есть гипотеза, и ваш MVP (самый ранний тестируемый продукт) - это один из
+способов (но не единственный) проверить эту гипотезу.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Создание MVP — не единственный способ проверки гипотезы. Иногда может быть
+достаточно визуального прототипа.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Одной из ошибок, допускаемых при создании продукта, является создание
+продуктов и услуг на основе прототипа.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Как напомнил нам Фредерик Брукс-младший более 35 лет назад в своей
+основополагающей книге «Мифический человеко-месяц»:</p>
+<blockquote class="nx-mt-6 nx-border-gray-300 nx-italic nx-text-gray-700 dark:nx-border-gray-700 dark:nx-text-gray-400 first:nx-mt-0 ltr:nx-border-l-2 ltr:nx-pl-6 rtl:nx-border-r-2 rtl:nx-pr-6">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">«В большинстве проектов первая построенная система практически не
+используется. Она может быть слишком медленной, слишком большой, неудобной в
+использовании или всеми тремя. Нет альтернативы, кроме как начать сначала,
+умнее, но умнее, создать переработанную версию, в которой эти проблемы
+решены. Утилизация и переделка могут быть выполнены за один раз или по
+частям. Но опыт работы с большими системами показывает, что это будет
+сделано. Когда используется новая концепция системы или новая технология,
+нужно построить систему, которую можно выбросить, потому что даже самое
+лучшее планирование не настолько всесторонне, чтобы сделать все правильно с
+первого раза».</p>
+</blockquote>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Это так же верно сейчас, как и тогда, когда Фредерик впервые написал это в
+1970-х годах. Подобно строительству дома на песке, создание продукта на основе
+MVP, скрепленного веревкой, липкой лентой и достаточным объемом технического
+долга, чтобы потопить Титаник, никогда не является хорошей идеей. Относитесь к
+своему MVP как к учебному упражнению и откажитесь от кода, как только вы
+узнаете достаточно, чтобы двигаться дальше.</p>
+<h2 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-10 nx-border-b nx-pb-1 nx-text-3xl nx-border-neutral-200/70 contrast-more:nx-border-neutral-400 dark:nx-border-primary-100/10 contrast-more:dark:nx-border-neutral-400">Проектирование, основанное на гипотезах<a href="#проектирование-основанное-на-гипотезах" id="проектирование-основанное-на-гипотезах" class="subheading-anchor" aria-label="Permalink for this section"></a></h2>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Гипотеза - это в основном предположение. То, что кто-то считает правдой.
+Гипотеза помогает вам подтвердить или опровергнуть предположение. Они либо
+доказаны, либо опровергнуты исследованиями и экспериментами.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Результаты этих экспериментов говорят вам, действительно ли вы понимаете
+поведение своего пользователя и насколько точно вы понимаете потенциал или
+подводные камни своей концепции.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Каждая проверенная гипотеза может дать новое понимание для будущих этапов
+разработки вашего продукта. Вот почему мы считаем, что их формирование на
+основе исследований и доказательств имеет основополагающее значение для
+дизайна продукта, ориентированного на клиента.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Цель проверки гипотез — верификация любых, даже труднодостижимых решений, на
+которые невозможно положиться сразу.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Достоинства проектирования на основе гипотез:</p>
+<ol class="nx-mt-6 nx-list-decimal first:nx-mt-0 ltr:nx-ml-6 rtl:nx-mr-6">
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Получить поддержку команды<br/>
+<em>Каждый может участвовать в написании гипотез, поэтому каждый чувствует
+ответственность и вовлеченность. Это означает, что идеи не нужно «продавать»
+или «оправдывать» в дальнейшем, поскольку все настроены на одну и ту же
+волну.</em></p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Меньше бумажной работы<br/>
+<em>Поскольку вы обсуждаете гипотезы вместе, вам нужно будет создавать меньше
+документации.</em></p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Приоритетная дорожная карта<br/>
+<em>Проектирование, основанное на гипотезах, означает, что ваша дорожная карта
+будет сформирована на основе доказательств.</em></p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Постоянное обучение<br/>
+<em>Даже после того, как была выпущена новая функция, вы можете использовать
+свои предположения для дальнейшего исследования и открытия новых идей. Легко
+найти проблемы с дизайном, которые было бы трудно обнаружить одним только
+«дизайнерским глазом».</em></p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Функции, которые нужны пользователю.<br/>
+Проектирование <em>, основанное на гипотезах, означает, что пользователи получают
+функции, которые соответствуют назначению и решают реальные потребности.</em></p>
+</li>
+</ol>
+<h3 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-8 nx-text-2xl">Написание проектной гипотезы<a href="#написание-проектной-гипотезы" id="написание-проектной-гипотезы" class="subheading-anchor" aria-label="Permalink for this section"></a></h3>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Для написание проектной гипотезы вы начинаете с простого утверждения и
+помещаете его в структуру, например в такую:</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">В первой части гипотезы « <em>Мы считаем, что</em> …» вы делаете обоснованное
+предположение о поведении пользователя.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Следующая часть « <em>Итак, если мы</em> …» - это действие, то, что мы хотим, чтобы
+пользователь сделал или думаем, что пользователь собирается сделать.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">« <em>Тогда мы увидим</em> …» - вот где указывается ваш ожидаемый результат или мера
+успеха.</p>
+<h3 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-8 nx-text-2xl">Тестирование гипотезы<a href="#тестирование-гипотезы" id="тестирование-гипотезы" class="subheading-anchor" aria-label="Permalink for this section"></a></h3>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Далее следует выбрать наиболее подходящий тест для вашей гипотезы.</p>
+<blockquote class="nx-mt-6 nx-border-gray-300 nx-italic nx-text-gray-700 dark:nx-border-gray-700 dark:nx-text-gray-400 first:nx-mt-0 ltr:nx-border-l-2 ltr:nx-pl-6 rtl:nx-border-r-2 rtl:nx-pr-6">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Мост Миллениум в Лондоне был первоначально открыт в 2000 году, и за один
+день по нему пересекли 90 000 человек, причем 2000 человек переходили по
+нему одновременно.</p>
+</blockquote>
+<blockquote class="nx-mt-6 nx-border-gray-300 nx-italic nx-text-gray-700 dark:nx-border-gray-700 dark:nx-text-gray-400 first:nx-mt-0 ltr:nx-border-l-2 ltr:nx-pl-6 rtl:nx-border-r-2 rtl:nx-pr-6">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">По мере того, как все больше людей переходили мост, он начал резко
+раскачиваться. Это движение стало хуже, поскольку все начали дружно
+противостоять направлению колебания. Это та же самая наука, по которой
+солдаты ломают ступеньку при переходе моста (см. Бротонский подвесной мост
+).</p>
+</blockquote>
+<blockquote class="nx-mt-6 nx-border-gray-300 nx-italic nx-text-gray-700 dark:nx-border-gray-700 dark:nx-text-gray-400 first:nx-mt-0 ltr:nx-border-l-2 ltr:nx-pl-6 rtl:nx-border-r-2 rtl:nx-pr-6">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Позже выяснилось, что инженеры, стоящие за проектированием моста Миллениум,
+представили и испытали только 160 человек, идущих по нему в любой момент
+времени.</p>
+</blockquote>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Это отличный пример того, когда установка правильных критериев тестирования и
+проведение соответствующих экспериментов для вашей гипотезы так важны и в
+конечном итоге могут стоить вам больших денег (исправление этого стоит еще 5
+миллионов фунтов стерлингов), если все сделано неправильно.</p>
+<h4 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-8 nx-text-xl">Количественные и качественные критерии<a href="#количественные-и-качественные-критерии" id="количественные-и-качественные-критерии" class="subheading-anchor" aria-label="Permalink for this section"></a></h4>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Первый важный шаг - решить, какой тип обратной связи вам нужен, чтобы
+подтвердить или опровергнуть вашу гипотезу.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Если вы тестируете новую концепцию и ваша мера успеха связана с <em>реакцией
+людей</em> , вы можете провести качественное исследование. Количественные методы
+исследования идеально подходят, если вам нужна обратная связь, связанная с
+измеримыми результатами, например, если ваша гипотеза связана с процессом
+регистрации или воронкой продаж.</p>
+<h2 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-10 nx-border-b nx-pb-1 nx-text-3xl nx-border-neutral-200/70 contrast-more:nx-border-neutral-400 dark:nx-border-primary-100/10 contrast-more:dark:nx-border-neutral-400">Приоритизация задач<a href="#приоритизация-задач" id="приоритизация-задач" class="subheading-anchor" aria-label="Permalink for this section"></a></h2>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Для приоритизации задач / бэклога продукта следует понимать проблемы, решаемые
+задачей и желаемые цели.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Решаемые проблемы должны соответствовать текущей стратегии компании.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Любая проблема имеет две характеристики</p>
+<ol class="nx-mt-6 nx-list-decimal first:nx-mt-0 ltr:nx-ml-6 rtl:nx-mr-6">
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Вероятность/частота возникновения</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Степень воздействия / масштаб последствий (с учетом обратимости)</p>
+</li>
+</ol>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">В зависимости от данных характеристик, проблема может требовать различного
+уровня проработки.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Частая проблема, приводящая к необратимым последствиям требует повышенного
+анализа.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Редкая или обратимая проблема требует меньшего времени для анализа и
+проработки.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Есть всего несколько целей бизнеса верхнего уровня, и они не меняются,
+меняются только инструменты:</p>
+<ol class="nx-mt-6 nx-list-decimal first:nx-mt-0 ltr:nx-ml-6 rtl:nx-mr-6">
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Увеличение прибыли/рентабельности</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Снижение рисков</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Увеличение продаж/конверсии</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Снижение расходов/кол-ва человек/времени</p>
+</li>
+</ol>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Для приоритизации задач может быть полезным размещение их виде матрицы (см.
+книгу <a class="nx-text-primary-600 nx-underline nx-decoration-from-font [text-underline-position:from-font]" href="/idocs/books/productmanagement/Intercom_on_Product_Management.pdf">Intercom on Product
+Management</a>)</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Высокая стоимость</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Низкая ценность</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">(крупные внутренние доработки)</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">|</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Высокая стоимость</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Высокая ценность</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">(обычные элементы дорожной карты)</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">---|---</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Низкая стоимость</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Низкая ценность</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">(небольшие внутренние доработки)</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">|</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Низкая стоимость</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Высокая ценность</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">(quick wins)</p>
+<h2 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-10 nx-border-b nx-pb-1 nx-text-3xl nx-border-neutral-200/70 contrast-more:nx-border-neutral-400 dark:nx-border-primary-100/10 contrast-more:dark:nx-border-neutral-400">Задачи пользователей<a href="#задачи-пользователей" id="задачи-пользователей" class="subheading-anchor" aria-label="Permalink for this section"></a></h2>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">В фазе исследования продукта важную часть занимает исследование пользователей.
+Для того, чтобы определить рамки продукта, может быть полезным описать текущий
+бизнес-процесс в виде последовательности шагов или JTDB. Однако то, как
+пользователи выполняют задачи в текущем процессе не означает того, что ваш
+продукт должен механически позволять делать то же самое. Назначение процесса
+описания задач — понять цель выполняемых задач и найти болевые точки процесса
+с точки зрения пользователя.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Работа продукта начинается с того момента, когда действие пользователя
+переходит в его предметную область.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Продукт, который вы создаете, решает проблему пользователя — «выполняет
+работу». Бизнес или пользователи покупают, то есть «нанимают на работу» ваш
+продукт, чтобы он сделал свою работу.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Начинающий менеджер продукта может задать вопрос: что первично — требования
+бизнеса к продукту или цели бизнеса? Цели первичны, они не меняются от
+продукта к продукту - это увеличение прибыли, снижение риска и т. д. Бизнес
+покупает не &quot;выполненные требования&quot;, а достигнутые цели. Если требования
+бизнеса не ведут к достижению целей или ведут не эффективно, этот вопрос
+должен решаться в форме диалога.</p>
+<h3 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-8 nx-text-2xl">Job To Be Done<a href="#job-to-be-done" id="job-to-be-done" class="subheading-anchor" aria-label="Permalink for this section"></a></h3>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Не достаточно провести опрос пользователей о выполняемых им работах и дать им
+инструмент для выполнения работ. Менеджер продукта должен дойти до
+первопричины выполняемых работ. Одним из инструментов фиксирования причин
+выполняемых работ является Job To Be Done.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Суть подхода JTBD: Фокусироваться на том, чего стремится достичь бизнес или
+пользователь в определенных обстоятельствах. Это и называется job to be done —
+«работа, которую надо выполнить».</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Job To Be Done = задача + контекст.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Контекст задачи важен потому, что сама по себе задача пользователя не имеет
+ценности. Задача приобретает ценность, когда мы ее выполняем для достижения
+прогресса в определенной ситуации.</p>
+<h3 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-8 nx-text-2xl">Интервью пользователей<a href="#интервью-пользователей" id="интервью-пользователей" class="subheading-anchor" aria-label="Permalink for this section"></a></h3>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Для получения перечня задач пользователей следует задавать направляющие
+вопросы.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Интервью может быть организовано кем угодно в команде (менеджером продукта,
+разработчиком, QA-инженером). Обратная связь пользователя, приводящая к
+изменениям в продукте, должна валидироваться на данных для того, чтобы
+понимать масштабность проблемы.</p>
+<h4 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-8 nx-text-xl">Что вы хотите сделать?<a href="#что-вы-хотите-сделать" id="что-вы-хотите-сделать" class="subheading-anchor" aria-label="Permalink for this section"></a></h4>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Ваша первоочередная задача — понять, чего хочет достичь пользователь своими
+действиями. Вы должны задать вопрос почему столько раз, сколько это требуется
+для того, чтобы понять первопричину проблемы (см. технику «<a href="https://ru.wikipedia.org/wiki/%D0%9F%D1%8F%D1%82%D1%8C_%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83" target="_blank" rel="noreferrer" class="nx-text-primary-600 nx-underline nx-decoration-from-font [text-underline-position:from-font]">Пять
+почему<span class="nx-sr-only nx-select-none"> (opens in a new tab)</span></a>»).</p>
+<h4 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-8 nx-text-xl">Как вы в настоящее время делаете это?<a href="#как-вы-в-настоящее-время-делаете-это" id="как-вы-в-настоящее-время-делаете-это" class="subheading-anchor" aria-label="Permalink for this section"></a></h4>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Вы должны проанализировать рабочий процесс, в каком контексте выполняется
+операция, масштаб проблемы. Если вы хотите сделать «ремонт» в отдельном
+бизнес-процессе, вы должны понимать, это косметический ремонт или перестройка
+всего процесса. Для разного масштаба действий требуются разные подходы,
+инструменты и средства. Вы можете избавить команду инженеров от работы с
+низкоценными процессами с помощью организационного изменения процесса или
+подхода.</p>
+<h4 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-8 nx-text-xl">Как можно улучшить то, что вы делаете?<a href="#как-можно-улучшить-то-что-вы-делаете" id="как-можно-улучшить-то-что-вы-делаете" class="subheading-anchor" aria-label="Permalink for this section"></a></h4>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Этот вопрос побуждает пользователя дать вам некоторые идеи о том, какие
+области нуждаются в наибольшей помощи.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Этот вопрос также может помочь вам получить информацию вас о прототипе,
+который вы можете создать, чтобы проверить, можете ли вы решить проблему.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Вы не должны создавать именно то, что говорят пользователи. Протестируйте
+прототипы, чтобы увидеть, в конечном итоге ваши проекты решают их проблему. Не
+просто делать то, что люди хотят.</p>
+<h2 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-10 nx-border-b nx-pb-1 nx-text-3xl nx-border-neutral-200/70 contrast-more:nx-border-neutral-400 dark:nx-border-primary-100/10 contrast-more:dark:nx-border-neutral-400">Сущности и их поведение<a href="#сущности-и-их-поведение" id="сущности-и-их-поведение" class="subheading-anchor" aria-label="Permalink for this section"></a></h2>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">От понимания проблемы и задач пользователя, проектирование продукта ведет вас
+к формулированию сущностей предметной области и их поведению.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Основа создания продукта лежит в моделировании сущностей реального мира.
+Поэтому понимание предметной области — ключевой навык менеджера продукта.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Описание сущностей - объектов реального мира — требует, чтобы эти объекты
+содержали всю бизнес логику в себе и строились исходя из того какую
+ответственность объекты имеют и как они взаимодействуют с другими объектами.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Модель — это информационный аналог объекта. Создавая модель, вы описываете
+сущности, их атрибутный состав и поведение. Описание всегда идёт от крупного
+плана к мелкому. Описывая сущности, вы постоянно смещаете фокус от общего
+плана до конкретных атрибутов и деталей поведения.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">см. профильный раздел «<a class="nx-text-primary-600 nx-underline nx-decoration-from-font [text-underline-position:from-font]" href="/idocs/project-managment/ddd.xhtml">Предметно-ориентированное
+программирование</a>»</p>
+<h3 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-8 nx-text-2xl">Состав сущностей<a href="#состав-сущностей" id="состав-сущностей" class="subheading-anchor" aria-label="Permalink for this section"></a></h3>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">При описании сущности прежде всего нужно обозначить ее — дать ей имя. Далее мы
+должны описать характеристики и возможности сущности.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">В описании сущности следует приводить не все ее свойства, а только
+существенные в данной ситуации. Описывая состав сущности, мы мысленно
+«разбираем» ее на части. При этом, как правило, используется такой приём:
+сначала называется небольшое число крупных частей, затем каждая из них
+«разбирается» на части поменьше и так далее.</p>
+<h3 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-8 nx-text-2xl">Состояние сущности<a href="#состояние-сущности" id="состояние-сущности" class="subheading-anchor" aria-label="Permalink for this section"></a></h3>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Под состоянием сущности мы подразумеваем определённое сочетание всех или
+некоторых характеристик этой сущности. Среди всех возможных состояний сущности
+обычно выделяется такие, при достижении которых ее свойства меняются особенно
+существенно, так, что либо вообще становятся недоступны некоторые из его
+действий, либо они выполняются другим способом. Например, колесо может быть в
+состоянии «Накачано», «Лопнуло», корзина продуктов может быть в состоянии
+«Создана», «Рассчитана», «Продана».</p>
+<h3 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-8 nx-text-2xl">Поведение сущностей<a href="#поведение-сущностей" id="поведение-сущностей" class="subheading-anchor" aria-label="Permalink for this section"></a></h3>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Имена действий означают процессы, которые могут происходить с сущностью, и
+отвечают на вопросы «что она может делать?» или «что с ней можно делать?».
+Например, автомобиль можно завести или остановить. Корзину продуктов можно
+создать, распечатать заявку на кредит, выдать кредит.</p>
+<h3 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-8 nx-text-2xl">Отношения<a href="#отношения" id="отношения" class="subheading-anchor" aria-label="Permalink for this section"></a></h3>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Кроме свойств конкретной сущности, следует описать и отношения между
+сущностями.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Существует два основных вида отношений:</p>
+<ol class="nx-mt-6 nx-list-decimal first:nx-mt-0 ltr:nx-ml-6 rtl:nx-mr-6">
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">генерализация (наследование), когда мы говорим, что одна сущность является надможеством другой сущности: «Евразия — это материк», или «Магазин — это Точка продаж».</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">соотношение множеств, когда мы говорим «колёса входят в состав автомобиля» или «Оферта входит в состав Корзины». В таких отношениях мы должны указать вид связи: 1:1, 1:M или M:1.</p>
+</li>
+</ol>
+<h3 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-8 nx-text-2xl">Игра «Сущности и поведение»<a href="#игра-сущности-и-поведение" id="игра-сущности-и-поведение" class="subheading-anchor" aria-label="Permalink for this section"></a></h3>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Лучше всего материал данной главы усваивается в виде игры «Сущности и
+поведение». Суть игры заключается в следующем:</p>
+<ol class="nx-mt-6 nx-list-decimal first:nx-mt-0 ltr:nx-ml-6 rtl:nx-mr-6">
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Ведущий называет каждому участнику по очереди сущность.</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Участник называет несколько поведений данной сущности, например «Светофор»: может переключаться сам по программе, можно включить кнопкой зеленый свет вручную</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Участник называет приемочный критерий для одного из видов поведений. Например, по шаблону «предусловие», «действия», «результат»: горит красные сигнал пешеходного светофора, пользователь нажимает кнопку на столбе, через 20 секунд зажигается зеленый сигнал светофора для пешеходов.</p>
+</li>
+</ol>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Для изучения отношений сущностей можно полезно задания участникам из одной
+общей сущности, например первый участник называет поведение сущности
+«автомобиль», остальные участники называют поведение вложенных сущностей
+«дверь», «колесо», «двигатель» и т. д.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Для понимания отношения «генерализация» следует обыграть пример, когда у
+нескольких сущностей появляется одно и то же поведение. Наличие общего
+поведения может быть причиной выделения общей, генеральной сущности. Например,
+в ходе игры с предметами окружающего мира, участники выяснили, что «завести»
+можно грузовой, легковой автомобиль или автобус. В зависимости от целей и
+условий моделирования, данный факт может послужить причиной выделения базовой
+сущности «Транспортное средство», обладающей поведением «Завести»</p>
+<h2 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-10 nx-border-b nx-pb-1 nx-text-3xl nx-border-neutral-200/70 contrast-more:nx-border-neutral-400 dark:nx-border-primary-100/10 contrast-more:dark:nx-border-neutral-400">Моделирование<a href="#моделирование" id="моделирование" class="subheading-anchor" aria-label="Permalink for this section"></a></h2>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Моделирование - это:</p>
+<ol class="nx-mt-6 nx-list-decimal first:nx-mt-0 ltr:nx-ml-6 rtl:nx-mr-6">
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">построение моделей реально существующих объектов (предметов, явлений, процессов)</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">замена реального объекта его подходящей копией, исследование объектов познания на их моделях</p>
+</li>
+</ol>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Методики моделирования</p>
+<ol class="nx-mt-6 nx-list-decimal first:nx-mt-0 ltr:nx-ml-6 rtl:nx-mr-6">
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0"><a href="https://ru.wikipedia.org/wiki/%D0%9C%D1%8B%D1%81%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D1%8D%D0%BA%D1%81%D0%BF%D0%B5%D1%80%D0%B8%D0%BC%D0%B5%D0%BD%D1%82" target="_blank" rel="noreferrer" class="nx-text-primary-600 nx-underline nx-decoration-from-font [text-underline-position:from-font]">Мысленный эксперимент<span class="nx-sr-only nx-select-none"> (opens in a new tab)</span></a> - «разыгрывание» ситуации в воображении, основываясь на реальных сценариях поведения пользователя или клиента.</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0"><a href="https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D1%89%D0%B0%D1%8F_%D1%82%D0%B5%D0%BE%D1%80%D0%B8%D1%8F_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC" target="_blank" rel="noreferrer" class="nx-text-primary-600 nx-underline nx-decoration-from-font [text-underline-position:from-font]">Системное мышление <span class="nx-sr-only nx-select-none"> (opens in a new tab)</span></a>- возможность обобщать и распространять свой опыт, полученный в одной области, на окружающий мир.</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0"><a href="https://en.wikipedia.org/wiki/Scenario_analysis" target="_blank" rel="noreferrer" class="nx-text-primary-600 nx-underline nx-decoration-from-font [text-underline-position:from-font]">Сценарный анализ<span class="nx-sr-only nx-select-none"> (opens in a new tab)</span></a> — способность рассматривать альтернативные варианты развития событий, сравнивая их результаты.</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0"><a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7_%D1%87%D1%83%D0%B2%D1%81%D1%82%D0%B2%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8" target="_blank" rel="noreferrer" class="nx-text-primary-600 nx-underline nx-decoration-from-font [text-underline-position:from-font]">Анализ чувствительности<span class="nx-sr-only nx-select-none"> (opens in a new tab)</span></a> - оценке влияния изменения исходных параметров <a href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82" target="_blank" rel="noreferrer" class="nx-text-primary-600 nx-underline nx-decoration-from-font [text-underline-position:from-font]">проекта<span class="nx-sr-only nx-select-none"> (opens in a new tab)</span></a> на его конечные характеристики, в качестве которых, обычно, используется внутренняя <a href="https://ru.wikipedia.org/wiki/%D0%9D%D0%BE%D1%80%D0%BC%D0%B0_%D0%BF%D1%80%D0%B8%D0%B1%D1%8B%D0%BB%D0%B8" target="_blank" rel="noreferrer" class="nx-text-primary-600 nx-underline nx-decoration-from-font [text-underline-position:from-font]">норма прибыли<span class="nx-sr-only nx-select-none"> (opens in a new tab)</span></a> или <a href="https://ru.wikipedia.org/wiki/%D0%A7%D0%B8%D1%81%D1%82%D0%B0%D1%8F_%D0%BF%D1%80%D0%B8%D0%B2%D0%B5%D0%B4%D1%91%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C" target="_blank" rel="noreferrer" class="nx-text-primary-600 nx-underline nx-decoration-from-font [text-underline-position:from-font]">NPV<span class="nx-sr-only nx-select-none"> (opens in a new tab)</span></a></p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0"><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D0%BC%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80" target="_blank" rel="noreferrer" class="nx-text-primary-600 nx-underline nx-decoration-from-font [text-underline-position:from-font]">Симуляция<span class="nx-sr-only nx-select-none"> (opens in a new tab)</span></a> - имитация процесса, например на ретро-данных поведения, характеристик клиентов, данных ранее заключенных сделок и т. д.</p>
+</li>
+</ol>
+<h2 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-10 nx-border-b nx-pb-1 nx-text-3xl nx-border-neutral-200/70 contrast-more:nx-border-neutral-400 dark:nx-border-primary-100/10 contrast-more:dark:nx-border-neutral-400">Анализ данных<a href="#анализ-данных" id="анализ-данных" class="subheading-anchor" aria-label="Permalink for this section"></a></h2>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Количественный анализ необходим как для принятия решения, так и для построения
+математических моделей.</p>
+<h3 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-8 nx-text-2xl">Методы анализа данных<a href="#методы-анализа-данных" id="методы-анализа-данных" class="subheading-anchor" aria-label="Permalink for this section"></a></h3>
+<ol class="nx-mt-6 nx-list-decimal first:nx-mt-0 ltr:nx-ml-6 rtl:nx-mr-6">
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">SQL. Самый простой доступный способ, позволяющий получить ответы на многие вопросы: сколько сделок совершается с дифференцированным графиком платежей? Какое среднее значение или медиана годовой ставки в разрезе X, Y, Z?</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Линейная регрессия. Позволяет не только построить модель результирующей переменной, но и оценить степень влияния переменных по коэффициентам. Для построения простой линейной регрессии можно использовать web-интерфейс <a href="http://docs.h2o.ai/" target="_blank" rel="noreferrer" class="nx-text-primary-600 nx-underline nx-decoration-from-font [text-underline-position:from-font]">H2O<span class="nx-sr-only nx-select-none"> (opens in a new tab)</span></a>.</p>
+</li>
+</ol>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Данные виды анализа позволяют провести раннюю диагностику проблемы, без
+обращения к профильным специалистам — <a class="nx-text-primary-600 nx-underline nx-decoration-from-font [text-underline-position:from-font]" href="/idocs/project-managment/productteam.xhtml#analitik_dann_h">аналитикам
+данных</a>. Они являются аналогом
+<a href="https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D0%B5%D1%82%D0%BE%D1%81%D0%BA%D0%BE%D0%BF" target="_blank" rel="noreferrer" class="nx-text-primary-600 nx-underline nx-decoration-from-font [text-underline-position:from-font]">стетоскопа<span class="nx-sr-only nx-select-none"> (opens in a new tab)</span></a> в больнице. Не всегда
+требуется МРТ и дорогостоящие виды анализа. Анализ всегда начинается с самых
+простых и доступных средств.</p>
+<h2 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-10 nx-border-b nx-pb-1 nx-text-3xl nx-border-neutral-200/70 contrast-more:nx-border-neutral-400 dark:nx-border-primary-100/10 contrast-more:dark:nx-border-neutral-400">Метрики<a href="#метрики" id="метрики" class="subheading-anchor" aria-label="Permalink for this section"></a></h2>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Для управления продуктом на основе данных мы должны сформулировать метрики,
+которые имеют значение для бизнеса. Сначала определяем корневые метрики,
+интересующий бизнес, далее декомпозируем их на то, что на них влияет.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Как правило, бизнес интересует внутренняя <a href="https://ru.wikipedia.org/wiki/%D0%9D%D0%BE%D1%80%D0%BC%D0%B0_%D0%BF%D1%80%D0%B8%D0%B1%D1%8B%D0%BB%D0%B8" target="_blank" rel="noreferrer" class="nx-text-primary-600 nx-underline nx-decoration-from-font [text-underline-position:from-font]">норма
+прибыли<span class="nx-sr-only nx-select-none"> (opens in a new tab)</span></a>. Следовательно, мы
+должны взять данную метрику как корневую и проанализировать, что и в какой
+мере влияет на данную метрику: из чего формируются прибыли и убытки денежного
+потока.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Так же бизнес может задать целью определенные объемы продаж для того, чтобы
+максимально полно использовать имеющиеся ресурсы, например капитал.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Объемы продаж складываются из первичной лидогенерации — потери на каждом этапе
+воронки продаж. Следовательно, увеличение продаж возможно как за счет
+дополнительной лидогенерации (SEO, платные лиды), так и за счет устранения
+потерь конверсии.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Для устранения потерь конверсии мы должны проанализировать воронку продаж и
+соотношение количества фактов на различных этапах воронки. Значительное
+падение фактов на любом этапе воронки продаж является сигналом к анализу
+причин данного «выпадения».</p>
+<h3 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-8 nx-text-2xl">Характеристики метрики<a href="#характеристики-метрики" id="характеристики-метрики" class="subheading-anchor" aria-label="Permalink for this section"></a></h3>
+<h4 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-8 nx-text-xl">Релевантность<a href="#релевантность" id="релевантность" class="subheading-anchor" aria-label="Permalink for this section"></a></h4>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Соответствует ли метрика основным бизнес-целям? Если вы измените значение, это
+приведет к положительным изменениям?</p>
+<h4 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-8 nx-text-xl">Измеримость<a href="#измеримость" id="измеримость" class="subheading-anchor" aria-label="Permalink for this section"></a></h4>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Является ли значение метрик объективным? Вы можете определить формулу расчета
+метрики? Можно ли технически получить данные для расчета метрики?</p>
+<h4 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-8 nx-text-xl">Действенность<a href="#действенность" id="действенность" class="subheading-anchor" aria-label="Permalink for this section"></a></h4>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Можете ли вы сделать что-то положительное и действенное с данными? Рассчитать
+мотивацию?</p>
+<h4 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-8 nx-text-xl">Надежность<a href="#надежность" id="надежность" class="subheading-anchor" aria-label="Permalink for this section"></a></h4>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Метрика технически устойчива? Будет ли она актуальной через год? Поможет ли
+она отслеживать прогресс с течением времени?</p>
+<h4 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-8 nx-text-xl">Удобочитаемость<a href="#удобочитаемость" id="удобочитаемость" class="subheading-anchor" aria-label="Permalink for this section"></a></h4>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Может ли значение метрики быть неправильно понято? Требуется ли много
+контекста для понимания метрики? Есть ли «отставание» метрики, затрудняющее
+оценку?</p>
+<h2 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-10 nx-border-b nx-pb-1 nx-text-3xl nx-border-neutral-200/70 contrast-more:nx-border-neutral-400 dark:nx-border-primary-100/10 contrast-more:dark:nx-border-neutral-400">Воронка продаж<a href="#воронка-продаж" id="воронка-продаж" class="subheading-anchor" aria-label="Permalink for this section"></a></h2>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Единицей продаж в нашем продукте является корзина. Мы можем отметить ключевые
+события, в которых происходит интересующее бизнес изменение статуса корзины.</p>
+<ol class="nx-mt-6 nx-list-decimal first:nx-mt-0 ltr:nx-ml-6 rtl:nx-mr-6">
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Перспективные возможности. Воронка продаж начинается с того, что посетитель на сайте изучает описание продукта или иной материал связанный с продуктом, где мы можем предположить интерес клиента.</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Лиды. Момент, когда клиент проявляет ярко выраженный интерес к сделке, идентифицирует себя (регистрируется на сайте), вводит данные или заполняет корзину является следующим существенным изменением состояния. Получив статистику, мы увидим соотношение общего количество сгенерированных лидов к перспективным возможностям.</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Лид может перерасти в заявку. Событием перехода в заявку мы считаем момент когда клиент наполнил корзину и оформил заявку.</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Заявка может перерасти в сделку. Сделка - это бизнес-цель всего процесса.</p>
+</li>
+</ol>
+<h2 class="nx-font-semibold nx-tracking-tight nx-text-slate-900 dark:nx-text-slate-100 nx-mt-10 nx-border-b nx-pb-1 nx-text-3xl nx-border-neutral-200/70 contrast-more:nx-border-neutral-400 dark:nx-border-primary-100/10 contrast-more:dark:nx-border-neutral-400">Управление рисками<a href="#управление-рисками" id="управление-рисками" class="subheading-anchor" aria-label="Permalink for this section"></a></h2>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Каждое решение, которое принимает менеджер продукта, сопряжено с определенным
+риском. В случае сомнений всегда полезно задавать правильные вопросы,
+вовлекать соответствующие заинтересованные стороны и использовать данные и
+идеи, когда они у вас есть, чтобы принять осознанное решение, и при этом иметь
+возможность вернуться к чему-то, если вам это абсолютно необходимо.</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">[](<a href="https://medium.com/swlh?source=post_sidebar--------------------------" target="_blank" rel="noreferrer" class="nx-text-primary-600 nx-underline nx-decoration-from-font [text-underline-position:from-font]">https://medium.com/swlh?source=post_sidebar--------------------------<span class="nx-sr-only nx-select-none"> (opens in a new tab)</span></a>
+post_sidebar-)</p>
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Рассмотрим некоторые вопросы и стратегии, которые можно использовать для
+выявления, оценки и потенциального снижения рисков, чтобы в конечном итоге
+обеспечить запуск успешного продукта.</p>
+<ol class="nx-mt-6 nx-list-decimal first:nx-mt-0 ltr:nx-ml-6 rtl:nx-mr-6">
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Вы правильно расставили приоритеты?<br/>
+Задача приоритизации дорожной карты может быть особенно сложной и сопряженной
+с риском, потому что вы часто учитываете несколько факторов, пытаясь собрать
+достаточно подтверждающих доказательств для поддержки своих решений. Важно
+убедиться, что вы расставляете приоритеты на основе показателей, которые лучше
+всего соответствуют целям продукта, ожиданиям бизнеса и руководства, а также
+тому, что клиенту нужно больше всего прямо сейчас.</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Насколько отличается этот продукт для вашей организации от других продуктов или выпусков?<br/>
+В зависимости от того, запускаете ли вы новую версию существующего продукта
+или совершенно новый продукт, ваши риски могут значительно различаться.
+Например, если вы запускаете новую функцию в стабильном, зрелом продукте, у
+вас, вероятно, уже есть определенные базовые данные о ваших пользователях,
+техническом стеке, предыдущей производительности продукта и т.д. Это все
+обширные данные, которые вы можете использовать для принимать взвешенные
+решения о том, подойдет ли новая функция вашей аудитории и насколько
+реалистичны целевые ключевые показатели эффективности. Однако, если вы
+запускаете совершенно новый продукт или говорите о новой интеграции или
+расширении продукта, риск определенно выше, поскольку существующие данные
+могут не служить хорошим показателем. Если вы попали в этот сценарий,
+подумайте об инвестировании в дополнительные исследования пользователей и
+рынка, изучение вторичных источников данных, анализировать конкуренцию и в
+конечном итоге полагаться на свою интуицию и опыт. Это может особенно
+пригодиться, если вам нужно убедить своих руководителей в том, что этот новый
+продукт / не является жизнеспособной идеей и почему его следует / не следует
+реализовывать.</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Насколько вы уверены в дизайне продукта?<br/>
+Нетрудно понять, почему менеджеры по маркетингу и дизайнеры должны работать
+рука об руку при разработке новых функций или улучшений. Это необходимо для
+того, чтобы команда разрабатывала правильный пользовательский интерфейс,
+который реально отвечает целям продукта / функции при минимизации рисков
+проектирования. Например, работает ли выбор традиционной обработки дизайна
+против вашего продукта, потому что контекст кардинально отличается? Всегда
+безопаснее проводить адекватные исследования и тестирование пользователей,
+когда в дизайне есть области, которые вызывают неопределенность с точки зрения
+удобства использования или способности достигать целей. Как менеджер проекта,
+вы хотите убедиться, что вы вселяете в свой дизайн столько же уверенности,
+прежде чем инженеры разработают и протестируют функцию, чтобы снизить
+вероятность внесения изменений в функцию после ее полной разработки (или, что
+еще хуже, после ее выпуска. )</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Вы достаточно протестировали?<br/>
+Конечно, обеспечение качества - это ключевая часть процесса разработки
+продукта, но какие еще тесты, по вашему мнению, будут пропущены или
+дополнительно необходимы для обеспечения успешной доставки? Учитывайте ошибки,
+которые могут быть пропущены или упущены из виду вашими тестовыми командами
+из-за того, что не было проведено достаточных полевых испытаний или испытаний
+на долговечность. Некоторые ошибки могут появиться только после непрерывного
+использования продукта. Некоторые способы борьбы с этим в качестве менеджера -
+это встроить адекватное альфа- и бета-тестирование в вашу временную шкалу до
+запуска. Это поможет вам представить ваш продукт «реальным» пользователям и в
+среде, очень близкой к той, в которой будут находиться ваши конечные
+пользователи. Внутренние тесты с участием сотрудников в вашей команде или
+организации - отличный способ выполнить раннее тестирование, потому что любые
+потенциальные проблемы остаются внутри вашей организации (и не раскрываются
+заказчику), и эти тесты относительно рентабельны для запуска и управления. Это
+также может быть отличным способом выявить любые существенные проблемы в
+дизайне на основе отзывов пользователей, полученных свежим взглядом.
+Недостатком внутреннего тестирования является то, что вы можете подвергнуться
+предвзятости, а ваши тестовые пользователи могут не очень хорошо представлять
+ваших конечных пользователей. Вот тут-то и появляется бета-тестирование,
+которое можно проводить либо через A / B-тестирование, либо через ограниченное
+развертывание. Менеджерам редко следует предпочесть полноценный запуск Это
+также может быть отличным способом выявить любые существенные проблемы в
+дизайне на основе отзывов пользователей, полученных свежим взглядом.</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Я отслеживаю правильные показатели?<br/>
+Важно определить и согласовать правильные показатели, которые нужно
+отслеживать и отслеживать на ранних этапах цикла. Хотя в некоторых случаях эти
+метрики могут быть очевидными на основе целей, поставленных бизнесом, чаще
+всего менеджеры по менеджменту должны владеть метриками и отслеживать их,
+чтобы наилучшим образом определять рентабельность инвестиций при выпуске, и
+проверять их у ключевых заинтересованных сторон, чтобы прояснить опасения. С
+технической стороны, чтобы иметь данные, которым вы можете доверять, вам
+необходимо провести время со своей аналитической командой, чтобы понять,
+откуда берутся данные, как они агрегируются и в каких отчетах. Могут быть
+различия в интерпретации данных, и важно согласовать команды в отношении того,
+что отслеживается и сообщается задолго до выпуска. Более того, если новая
+функция приносит с собой новые показатели,</p>
+</li>
+<li class="nx-my-2">
+<p class="nx-mt-6 nx-leading-7 first:nx-mt-0">Я создаю пути отступления?<br/>
+При любом выборе продукта всегда лучше создавать план «отступления». Если вы
+выпускаете новую версию продукта, есть ли у вас план отката на случай
+непредвиденных обстоятельств? Есть ли какие-либо соображения по поводу
+обратной совместимости и проверяли ли вы их? Если исправление программного
+обеспечения - единственный путь вперед, насколько сложно и прерывисто его
+администрировать? Даже если вы очень уверены в своем продукте / функциях,
+всегда полезно создать пути отката, чтобы в случае возникновения проблемы у
+вас был относительно безболезненный выход.</p>
+</li>
+</ol><div class="nx-mt-16"></div><div class="nx-mb-8 nx-flex nx-items-center nx-border-t nx-pt-8 dark:nx-border-neutral-800 contrast-more:nx-border-neutral-400 dark:contrast-more:nx-border-neutral-400 print:nx-hidden"><a title="Pmbok6" class="nx-flex nx-max-w-[50%] nx-items-center nx-gap-1 nx-py-4 nx-text-base nx-font-medium nx-text-gray-600 nx-transition-colors [word-break:break-word] hover:nx-text-primary-600 dark:nx-text-gray-300 md:nx-text-lg ltr:nx-pr-4 rtl:nx-pl-4" href="/idocs/project-managment/PMBOK6/"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="nx-inline nx-h-5 nx-shrink-0 ltr:nx-rotate-180"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>Pmbok6</a><a title="Nupp Principles" class="nx-flex nx-max-w-[50%] nx-items-center nx-gap-1 nx-py-4 nx-text-base nx-font-medium nx-text-gray-600 nx-transition-colors [word-break:break-word] hover:nx-text-primary-600 dark:nx-text-gray-300 md:nx-text-lg ltr:nx-ml-auto ltr:nx-pl-4 ltr:nx-text-right rtl:nx-mr-auto rtl:nx-pr-4 rtl:nx-text-left" href="/idocs/project-managment/NUPP_p3express/NUPP-principles/">Nupp Principles<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="nx-inline nx-h-5 nx-shrink-0 rtl:nx-rotate-180"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></a></div></main></article></div><footer class="nx-bg-gray-100 nx-pb-[env(safe-area-inset-bottom)] dark:nx-bg-neutral-900 print:nx-bg-transparent"><div class="nx-mx-auto nx-flex nx-max-w-[90rem] nx-gap-2 nx-py-2 nx-px-4 nx-hidden"><button title="Change theme" class="nx-h-7 nx-rounded-md nx-px-2 nx-text-left nx-text-xs nx-font-medium nx-text-gray-600 nx-transition-colors dark:nx-text-gray-400 hover:nx-bg-gray-100 hover:nx-text-gray-900 dark:hover:nx-bg-primary-100/5 dark:hover:nx-text-gray-50" id="headlessui-listbox-button-:Rkt6:" type="button" aria-haspopup="listbox" aria-expanded="false" data-headlessui-state=""><div class="nx-flex nx-items-center nx-gap-2 nx-capitalize"><svg fill="none" viewBox="3 3 18 18" width="12" height="12" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" fill="currentColor" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg><span class="">Light</span></div></button></div><hr class="dark:nx-border-neutral-800"/><div class="nx-mx-auto nx-flex nx-max-w-[90rem] nx-justify-center nx-py-12 nx-text-gray-600 dark:nx-text-gray-400 md:nx-justify-start nx-pl-[max(env(safe-area-inset-left),1.5rem)] nx-pr-[max(env(safe-area-inset-right),1.5rem)]">Iconicompany docs</div></footer></div></div><script id="__NEXT_DATA__" type="application/json" crossorigin="">{"props":{"pageProps":{}},"page":"/project-managment/productmanagement","query":{},"buildId":"kL1Xc4OEDAuoyPgptO0cu","assetPrefix":"/idocs","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script></body></html>
