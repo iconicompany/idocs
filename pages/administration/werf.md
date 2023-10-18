@@ -8,11 +8,9 @@
 Settings -> Secrets and variables -> Actions, например https://github.com/iconicompany/projecttemplate/settings/secrets/actions
 
 - KUBE_CONFIG_BASE64_DATA - конфиг k3s для прода в base64
-- KUBE_CONFIG_BASE64_SANDBOX - конфиг k3s для sandbox в base64
 - REGISTRY_USERNAME - пользователь для доступа к docker registry (deploy token в gitlab) = iconibot
 - REGISTRY_PASSWORD - пароль для доступа к docker registry
 - WERF_SECRET_KEY - ключ для шифрованных значений для прода
-- WERF_SECRET_KEY_SANDBOX - ключ для шифрованных значений для sandbox
 
 В переменные KUBE_CONFIG_BASE64* нужно грузить сертификат для отдельной учетки, скрипт для генерации
 [generate-user.sh](https://github.com/iconicompany/icluster/blob/master/apicerts/generate-user.sh)
@@ -80,5 +78,5 @@ WERF_REPO=registry.gitlab.com/iconicompany/projecttemplate
 1. Настроить перезапуск проекта при обновлении secret.yaml
 2. Настройка планировщика cron для запуска заданий из проекта
 3. Сервис для публикации и просмотра логов
-4. Создание БД при первом запуске
+4. Создание БД при первом запуске / для ветки
 5. Чистка docker registry через `werf cleanup`
