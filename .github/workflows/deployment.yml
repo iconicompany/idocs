@@ -2,32 +2,13 @@ name: Production Deployment
 on:
   push:
     branches: [main]
+
 jobs:
-
-  converge:
-    name: Converge
-    runs-on: ubuntu-latest
-    steps:
-      - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.9.1
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Login to Registry
-        uses: docker/login-action@v2
-        with:
-          username: ${{ secrets.REGISTRY_USERNAME }}
-          password: ${{ secrets.REGISTRY_PASSWORD }}
-
-      - name: Install werf
-        uses: werf/actions/install@v1.2
-
-      - name: Run script
-        run:
-          werf converge
-        env:
-          WERF_KUBECONFIG_BASE64: ${{ secrets.KUBE_CONFIG_BASE64_DATA }}
-          WERF_ENV: production
-          WERF_REPO: docker.io/iconicompany/idocs
-          WERF_SECRET_KEY: ${{ secrets.WERF_SECRET_KEY }}
-          DOCKER_BUILDKIT: 1
+  call-deployment:
+    uses: iconicompany/werfactions/.github/workflows/deployment.yml@main
+    secrets: inherit
+    with:
+      registry: registry.gitlab.com/${{ github.repository }}
+      context: production
+      env: production
+      setenv: env.DOMAIN=iconicompany.ru
