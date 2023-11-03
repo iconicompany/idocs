@@ -5,10 +5,11 @@
   "project-catalogue": "Каталог проектов",
   "onboarding": "Onboarding for DEVELOPER",
   "project-managment": "Управление проектами",
+  "posts": "Статьи, заметки, посты",
   "contact": {
     "title": "Contact ↗",
     "type": "page",
-    "href": "https://iconicompany.com/",
+    "href": "https://iconicompany.ru/",
     "newWindow": true
   }
 }
