@@ -14,7 +14,7 @@ COPY *.js *.yaml *.ts? *.json ./
 COPY pages pages
 
 COPY --from=deps /app/node_modules ./node_modules
-RUN npm run build
+RUN npm run export
 
 FROM nginx:alpine
 COPY --from=builder /app/out /usr/share/nginx/html/idocs
