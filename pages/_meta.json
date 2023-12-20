@@ -1,11 +1,14 @@
 {
-  "index": "Introduction",
-  "development": "Разработка",
-  "administration": "Servers, databases, clusters",
-  "project-catalogue": "Каталог проектов",
-  "onboarding": "Onboarding for DEVELOPER",
-  "project-managment": "Управление проектами",
-  "posts": "Статьи, заметки, посты",
+  "index": "Обзор",
+
+  "tech": {
+    "title": "Разработка",
+    "type": "page"
+  },
+  "project-management": {
+    "title": "Управление проектами",
+    "type": "page"
+  },
   "contact": {
     "title": "Contact ↗",
     "type": "page",

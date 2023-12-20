@@ -1,0 +1,8 @@
+{
+  "werfactions": "Kubernetes для развертывания веток и Pull Request",
+  "guidelines": "Гайдлайны",
+  "nodejs": "Nodejs docs",
+  "telegram": "Telegram",
+  "administration": "Servers, databases, clusters",
+  "project-catalogue": "Каталог проектов"
+}
