@@ -7,12 +7,12 @@
 
 Settings -> Secrets and variables -> Actions, например https://github.com/iconicompany/projecttemplate/settings/secrets/actions
 
-- KUBE_CONFIG_BASE64_DATA - конфиг k3s для прода в base64
-- REGISTRY_USERNAME - пользователь для доступа к docker registry (deploy token в gitlab) = iconibot
-- REGISTRY_PASSWORD - пароль для доступа к docker registry
-- WERF_SECRET_KEY - ключ для шифрованных значений для прода
+- KUBE_CONFIG - конфиг доступа kubernetes в base64
+- WERF_SECRET_KEY - ключ для шифрованных значений. **Не нужно если нет шифрованных файлов**
+- REGISTRY_USERNAME - пользователь для доступа к docker registry. **Не нужно для ghcr.io**
+- REGISTRY_PASSWORD - пароль для доступа к docker registry. **Не нужно для ghcr.io**
 
-В переменные KUBE_CONFIG_BASE64* нужно грузить сертификат для отдельной учетки, скрипт для генерации
+В переменную KUBE_CONFIG нужно грузить сертификат для отдельной учетки, скрипт для генерации
 [generate-user.sh](https://github.com/iconicompany/icluster/blob/master/apicerts/generate-user.sh)
 
 2. Настроить проект
@@ -36,7 +36,7 @@ Settings -> Secrets and variables -> Actions, например https://github.co
 
 Секреты через `werf helm secret values` грузятся в deployment в открытом виде. Вместо этого лучше делать отдельные секреты [secret.yaml](https://github.com/iconicompany/projecttemplate/blob/master/.helm/templates/secret.yaml)
 
-4. Создать пустой проект в gitlab для docker registry
+4. Создать пустой проект в gitlab для docker registry. **Не нужно для ghcr.io**
 New project -> Create blank project.
 Заполнить
 - Project name - имя проекта такое же как на github
@@ -76,7 +76,6 @@ WERF_REPO=registry.gitlab.com/iconicompany/projecttemplate
 ## Не решенные проблемы
 
 1. Настроить перезапуск проекта при обновлении secret.yaml
-2. Настройка планировщика cron для запуска заданий из проекта
-3. Сервис для публикации и просмотра логов
-4. Создание БД при первом запуске / для ветки
-5. Чистка docker registry через `werf cleanup`
+2. Сервис для публикации и просмотра логов
+3. Создание БД при первом запуске / для ветки
+4. Чистка docker registry через `werf cleanup`
