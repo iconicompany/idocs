@@ -1,19 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: idocs
+  name: {{ $.Values.werf.name }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: idocs
+      app: {{ $.Values.werf.name }}
   template:
     metadata:
       labels:
-        app: idocs
+        app: {{ $.Values.werf.name }}
     spec:
-      imagePullSecrets:
-      - name: registrysecret
       containers:
       - name: app
         image: {{ .Values.werf.image.app }}

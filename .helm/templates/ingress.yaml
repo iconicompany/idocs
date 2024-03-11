@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: idocs
+  name: {{ $.Values.werf.name }}
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
@@ -13,10 +13,10 @@ spec:
   - host: {{ $.Values.env.HOST }}
     http:
       paths:
-      - path: /idocs
+      - path: /{{ $.Values.werf.name }}
         pathType: Prefix
         backend:
           service:
-            name: idocs
+            name: {{ $.Values.werf.name }}
             port:
               number: 80
