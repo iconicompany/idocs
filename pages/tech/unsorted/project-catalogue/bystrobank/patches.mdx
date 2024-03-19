@@ -1,0 +1,60 @@
+
+## Создание патча
+
+Иногда в проектах возникает необходимость в функционале который пакет не предоставляет, либо в пакете есть ошибки 
+и разработчики данного пакета очень долго вносят правки. 
+Данный способ позволяет вам изменять код сторонних пакетов, не изменяя их непосредственно, что упрощает обновление до новых версий пакетов в будущем.
+
+Делать будем на примере пакета rc-utils, на одном из проектов в браузере SeaMonkey не отображался
+скролбар и мы решили его пропатчить
+
+1. **Установите пакет `patch-package`**:
+   ```bash
+   npm install patch-package --save-dev
+   ```
+   `patch-package` - это инструмент, который позволяет создавать и применять патчи для установленных пакетов npm.
+
+2. **Измените код `rc-util`**:
+   Выполните необходимые изменения в коде пакета `rc-util` в вашем проекте. Обычно это делается в папке `node_modules` вашего проекта.
+
+3. **Создайте патч**:
+   После того как вы внесли необходимые изменения в коде пакета, используйте `patch-package` для создания патча:
+   ```bash
+   npx patch-package rc-util
+   ```
+   Это создаст папку `patches` в вашем проекте и сохранит изменения пакета `rc-util` в виде патч-файла.
+  В нашем случае создасться файл с именем ***rc-util+5.38.1.patch***, следующего вида:
+   ```bash
+      diff --git a/node_modules/rc-util/es/getScrollBarSize.js b/node_modules/rc-util/es/getScrollBarSize.js
+    index 975e027..7363a0e 100644
+    --- a/node_modules/rc-util/es/getScrollBarSize.js
+    +++ b/node_modules/rc-util/es/getScrollBarSize.js
+    @@ -44,9 +44,15 @@ export function getTargetScrollBarSize(target) {
+          height: 0
+        };
+      }
+    -  var _getComputedStyle = getComputedStyle(target, '::-webkit-scrollbar'),
+    -    width = _getComputedStyle.width,
+    -    height = _getComputedStyle.height;
+    +  var _getComputedStyle = getComputedStyle(target, '::-webkit-scrollbar');
+    +  try {
+    +    var width = _getComputedStyle.width, height = _getComputedStyle.height;
+    +  } catch {
+    +    return {
+    +      width: 0,
+    +      height: 0
+    +    }
+    +  }
+      return {
+        width: ensureSize(width),
+        height: ensureSize(height)
+   ```
+
+4. **Примените патч при каждой установке**:
+   Для того чтобы ваш патч применялся каждый раз при установке зависимостей, добавьте следующую команду в раздел `scripts` вашего файла `package.json`:
+   ```json
+    "postinstall": "patch-package --error-on-fail"
+   ```
+   Это гарантирует, что ваш патч будет применяться после каждой установки зависимостей.
+
+Теперь ваш проект будет использовать пропатченную версию пакета `rc-util`. Помните, что при обновлении версии `rc-util` вам, возможно, придется пересоздать патч для новой версии, чтобы ваш код оставался совместимым.
