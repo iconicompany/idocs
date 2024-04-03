@@ -5,7 +5,7 @@ on:
 
 jobs:
   call-deployment:
-    uses: iconicompany/werfactions/.github/workflows/deployment.yml@main
+    uses: iconicompany/iconicactions/.github/workflows/deployment.yml@v0.3.0
     secrets: inherit
     with:
       env: production
