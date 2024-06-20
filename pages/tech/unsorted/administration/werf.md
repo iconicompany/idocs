@@ -42,7 +42,7 @@ docker run \
 Важно: `--env-file .env` - в таком варианте в .env файле не должно быть ковычек в значениях (")
 Иначе ковычки попадают в значение переменной. Пример ошибки:  Error validating datasource `db`: the URL must start with the protocol `postgresql://` or `postgres://`.
 
-6. Локальный запуск werf для отладки/изучения
+## Локальный запуск werf для отладки/изучения
 
 Прописать переменные:
 
