@@ -3,19 +3,7 @@
 Сборка werf запускается при push в репозиторий, результат смотреть в разделе [Actions](https://github.com/iconicompany/projecttemplate/actions). При успешном завершении проект выкладывается в kubernetes.
 Если проект не стартует, можно смотреть логи через [openlens](https://github.com/MuhammedKalkan/OpenLens/releases).
 
-1. Настроить у проекта переменные
-
-Settings -> Secrets and variables -> Actions, например https://github.com/iconicompany/projecttemplate/settings/secrets/actions
-
-- KUBE_CONFIG - конфиг доступа kubernetes в base64
-- WERF_SECRET_KEY - ключ для шифрованных значений. **Не нужно если нет шифрованных файлов**
-- REGISTRY_USERNAME - пользователь для доступа к docker registry. **Не нужно для ghcr.io**
-- REGISTRY_PASSWORD - пароль для доступа к docker registry. **Не нужно для ghcr.io**
-
-В переменную KUBE_CONFIG нужно грузить сертификат для отдельной учетки, скрипт для генерации
-[generate-user.sh](https://github.com/iconicompany/icluster/blob/master/apicerts/generate-user.sh)
-
-2. Настроить проект
+1. Настроить проект
 
 Каталоги:
 
@@ -25,25 +13,18 @@ Settings -> Secrets and variables -> Actions, например https://github.co
 - Dockerfile - настройка сборки проекта
 - .dockerignore - исключамые пути
 
-Первичная настройка делается поиском и заменой названия эталонного проекта в данных каталогах.
+Первичная настройка делается поиском и заменой названия эталонного проекта [iconicactions](https://github.com/iconicompany/iconicactions) в данных каталогах.
 
-3. Редактирование секретов
+2. Редактирование секретов
 
 Ключ шифрования положить в файл $HOME/.werf/global_secret_key или в переменную `WERF_SECRET_KEY`
 
 - `werf helm secret file edit` - редактирование прозвольного файла
 - `werf helm secret values edit` - редактирование yaml файла values
 
-Секреты через `werf helm secret values` грузятся в deployment в открытом виде. Вместо этого лучше делать отдельные секреты [secret.yaml](https://github.com/iconicompany/projecttemplate/blob/master/.helm/templates/secret.yaml)
+Секреты через `werf helm secret values` грузятся в deployment в открытом виде. Вместо этого лучше делать отдельные секреты [secret.yaml](https://github.com/iconicompany/iconicactions/blob/master/.helm/templates/secret.yaml)
 
-4. Создать пустой проект в gitlab для docker registry. **Не нужно для ghcr.io**
-New project -> Create blank project.
-Заполнить
-- Project name - имя проекта такое же как на github
-- Project URL - выбрать группу такую же, как организацию на github
-- Initialize repository with a README - снять галочку 
-
-5. Локальный запуск docker для отладки/изучения
+3. Локальный запуск docker для отладки/изучения
 
 - Сборка: `docker build -t projecttemplate . $*`
 - Запуск
@@ -66,9 +47,11 @@ docker run \
 Прописать переменные:
 
 ```
-WERF_ENV=sandbox
-WERF_VALUES_ENV=.helm/values-sandbox.yaml
-WERF_REPO=registry.gitlab.com/iconicompany/projecttemplate
+DOCKER_BUILDKIT=true \
+WERF_ENV=testing \
+WERF_SET_DOMAIN=env.DOMAIN=iconicactions-main.iconicompany.icncd.ru \
+WERF_REPO=ghcr.io/iconicompany/iconicactions/iconicactions \
+werf $*
 ```
 
 Запустить сборку командой `werf converge`
