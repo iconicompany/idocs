@@ -1,14 +1,14 @@
-#ARG NODE_REPO=oven/bun
-#ARG NODE_VERSION=alpine
-#ARG NODE_LOCK=bun.lockb
-#ARG NPM=bun
-#ARG NODE=bun
-
-ARG NODE_REPO=node
+ARG NODE_REPO=oven/bun
 ARG NODE_VERSION=alpine
-ARG NODE_LOCK=package-lock.json
-ARG NPM=npm
-ARG NODE=node
+ARG NODE_LOCK=bun.lockb
+ARG NPM=bun
+ARG NODE=bun
+
+# ARG NODE_REPO=node
+# ARG NODE_VERSION=alpine
+# ARG NODE_LOCK=package-lock.json
+# ARG NPM=npm
+# ARG NODE=node
 
 FROM ${NODE_REPO}:${NODE_VERSION} as deps
 ARG NODE_LOCK
