@@ -1,3 +1,4 @@
 {
-  "publishing-to-npm": "Публикация в NPM"
+  "publishing-to-npm": "Публикация в NPM",
+  "auto-update-version": "Автообновление версии"
 }
