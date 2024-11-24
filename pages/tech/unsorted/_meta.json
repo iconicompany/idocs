@@ -4,5 +4,6 @@
   "nodejs": "Nodejs docs",
   "telegram": "Telegram",
   "administration": "Servers, databases, clusters",
-  "project-catalogue": "Каталог проектов"
+  "project-catalogue": "Каталог проектов",
+  "monolith": "Микросервисный монолит"
 }
